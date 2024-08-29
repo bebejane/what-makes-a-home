@@ -1,7 +1,7 @@
 .navbar {
   position: fixed;
-  bottom: 0;
-  right: 0;
+  bottom: var(--outer-margin);
+  right: var(--outer-margin);
   z-index: var(--z-navbar);
 
   ul {
@@ -10,13 +10,15 @@
     flex-direction: row;
 
     li {
+      padding-left: 1rem;
       &.active {
         a {
           color: var(--blue);
         }
-
+      }
+      &:last-child {
+        padding-right: calc(6vw / 2);
       }
     }
   }
-
 }
