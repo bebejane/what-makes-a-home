@@ -26,6 +26,7 @@ export default function NavBar({ menu, }: Props) {
       <ul>
         {menu.map((item, i) => {
           const active = pathname === item.slug
+          console.log(active)
           return (
             <li key={i} className={cn(active && s.active)}>
               <Link href={item.slug}>

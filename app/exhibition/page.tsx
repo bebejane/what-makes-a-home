@@ -2,15 +2,26 @@ import s from './page.module.scss'
 import Link from "next/link"
 import { apiQuery } from 'next-dato-utils/api';
 import { DraftMode } from 'next-dato-utils/components';
-import { Image } from 'react-datocms';
+import Content from '../../components/content/Content';
+import { ExhibitionDocument } from '../../graphql';
+import { Image } from 'react-datocms/image';
 
 export default async function Page() {
 
-  ///const { start, draftUrl } = await apiQuery<StartQuery, StartQueryVariables>(StartDocument)
+  const { exhibition, draftUrl } = await apiQuery<ExhibitionQuery, ExhibitionQueryVariables>(ExhibitionDocument)
 
   return (
     <>
-      <h1>Page</h1>
+      <article>
+        <div>
+          <Image data={exhibition.image.responsiveImage} />
+        </div>
+        <div>
+          <h1>The Exhibition</h1>
+          <Content content={exhibition.text} />
+        </div>
+      </article>
+      <DraftMode url={draftUrl} path={'/exhibition'} />
     </>
   )
 }

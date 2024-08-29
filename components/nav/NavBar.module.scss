@@ -2,11 +2,21 @@
   position: fixed;
   bottom: 0;
   right: 0;
+  z-index: var(--z-navbar);
 
   ul {
     list-style: none;
     display: flex;
     flex-direction: row;
+
+    li {
+      &.active {
+        a {
+          color: var(--blue);
+        }
+
+      }
+    }
   }
 
 }

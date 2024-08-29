@@ -8,6 +8,9 @@
 	--background: var(--white);
 	--foreground: var(--black);
 
+	--z-navbar: 1000;
+	--z-what-is-a-home: 1001;
+
 	@include mq($from: tablet) {}
 
 	@include mq($until: tablet) {}
