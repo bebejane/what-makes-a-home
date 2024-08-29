@@ -1,0 +1,18 @@
+query About {
+	about {
+		title
+		intro {
+			links
+			value
+			blocks
+		}
+		text {
+			links
+			value
+			blocks
+		}
+		image {
+			...ImageFragment
+		}
+	}
+}

@@ -1,0 +1,37 @@
+query AllVenues {
+	allVenues {
+		id
+		city
+		openingDate
+		closingDate
+		address
+		openBetween
+		text {
+			blocks
+			value
+			links
+		}
+		gallery {
+			...MediaFragment
+		}
+	}
+}
+
+query Venue($id: ItemId!) {
+	venue(filter: { id: { eq: $id } }) {
+		id
+		city
+		openingDate
+		closingDate
+		address
+		openBetween
+		text {
+			blocks
+			value
+			links
+		}
+		gallery {
+			...MediaFragment
+		}
+	}
+}

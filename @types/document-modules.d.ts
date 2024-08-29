@@ -1,4 +1,22 @@
 
+declare module '*/about.gql' {
+  import { DocumentNode } from 'graphql';
+  const defaultDocument: DocumentNode;
+  export const About: DocumentNode;
+
+  export default defaultDocument;
+}
+    
+
+declare module '*/exhibition.gql' {
+  import { DocumentNode } from 'graphql';
+  const defaultDocument: DocumentNode;
+  export const Exhibition: DocumentNode;
+
+  export default defaultDocument;
+}
+    
+
 declare module '*/ImageFragment.gql' {
   import { DocumentNode } from 'graphql';
   const defaultDocument: DocumentNode;
@@ -53,6 +71,15 @@ declare module '*/SiteFragment.gql' {
 }
     
 
+declare module '*/VideoFragment.gql' {
+  import { DocumentNode } from 'graphql';
+  const defaultDocument: DocumentNode;
+  export const VideoFragment: DocumentNode;
+
+  export default defaultDocument;
+}
+    
+
 declare module '*/global.gql' {
   import { DocumentNode } from 'graphql';
   const defaultDocument: DocumentNode;
@@ -66,6 +93,25 @@ declare module '*/seo.gql' {
   import { DocumentNode } from 'graphql';
   const defaultDocument: DocumentNode;
   export const Site: DocumentNode;
+
+  export default defaultDocument;
+}
+    
+
+declare module '*/start.gql' {
+  import { DocumentNode } from 'graphql';
+  const defaultDocument: DocumentNode;
+  export const Start: DocumentNode;
+
+  export default defaultDocument;
+}
+    
+
+declare module '*/venue.gql' {
+  import { DocumentNode } from 'graphql';
+  const defaultDocument: DocumentNode;
+  export const AllVenues: DocumentNode;
+export const Venue: DocumentNode;
 
   export default defaultDocument;
 }

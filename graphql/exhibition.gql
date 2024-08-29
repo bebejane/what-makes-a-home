@@ -1,0 +1,18 @@
+query Exhibition {
+	exhibition {
+		title
+		intro {
+			links
+			value
+			blocks
+		}
+		text {
+			links
+			value
+			blocks
+		}
+		image {
+			...ImageFragment
+		}
+	}
+}

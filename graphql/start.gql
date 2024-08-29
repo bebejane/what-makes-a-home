@@ -1,0 +1,25 @@
+query Start {
+	start {
+		id
+		slideshow {
+			__typename
+			... on ImageRecord {
+				id
+				image {
+					...ImageFragment
+				}
+			}
+			... on TextRecord {
+				id
+				text
+				smallHeadline
+			}
+			... on VideoRecord {
+				id
+				video {
+					...VideoFragment
+				}
+			}
+		}
+	}
+}
