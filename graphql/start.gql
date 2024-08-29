@@ -3,18 +3,18 @@ query Start {
 		id
 		slideshow {
 			__typename
-			... on ImageRecord {
+			... on ImageBlockRecord {
 				id
 				image {
 					...ImageFragment
 				}
 			}
-			... on TextRecord {
+			... on TextBlockRecord {
 				id
 				text
 				smallHeadline
 			}
-			... on VideoRecord {
+			... on VideoBlockRecord {
 				id
 				video {
 					...VideoFragment

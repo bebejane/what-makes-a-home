@@ -3,6 +3,9 @@ import { apiQuery } from 'next-dato-utils/api';
 import { GlobalDocument } from '@graphql';
 import { Metadata } from 'next';
 import { Icon } from 'next/dist/lib/metadata/types/metadata-types';
+import WhatMakesAHome from '../components/common/WhatMakesAHome';
+import { buildMenu } from '../lib/menu';
+import NavBar from '../components/nav/NavBar';
 
 export type LayoutProps = {
   children: React.ReactNode
@@ -10,10 +13,14 @@ export type LayoutProps = {
 
 export default async function RootLayout({ children }: LayoutProps) {
 
+  const menu = await buildMenu()
+
   return (
     <>
       <html lang="en">
         <body id="root" >
+          <WhatMakesAHome />
+          <NavBar menu={menu} />
           <main>
             {children}
           </main>
