@@ -3,15 +3,11 @@
 import s from './StartGallery.module.scss'
 import cn from 'classnames'
 import { Image } from 'react-datocms'
-import { EffectFade, Autoplay } from 'swiper'
 import { VideoPlayer } from "next-dato-utils/components";
 import { sleep } from 'next-dato-utils/utils';
-import SwiperCore from 'swiper'
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { interval } from './WhatMakesAHome';
 import { useStore } from '../../lib/store'
-
-SwiperCore.use([EffectFade, Autoplay]);
 
 export type Props = {
   slides: (ImageBlockRecord | TextBlockRecord | VideoBlockRecord)[]
