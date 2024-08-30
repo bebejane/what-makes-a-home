@@ -37,6 +37,8 @@
       img,
       video {
         max-height: var(--height);
+        width: 100%;
+        object-fit: contain;
       }
 
       &.hide {

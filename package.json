@@ -28,6 +28,7 @@
 		"embla-carousel-autoplay": "^8.2.0",
 		"embla-carousel-react": "^8.2.0",
 		"graphql": "^16.8.1",
+		"hamburger-react": "^2.5.1",
 		"is-integer": "^1.0.7",
 		"next": "14.2.7",
 		"next-dato-utils": "github:bebejane/next-dato-utils",

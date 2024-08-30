@@ -9,8 +9,9 @@
 	--background: var(--white);
 	--foreground: var(--black);
 
-	--z-navbar: 1000;
-	--z-what-is-a-home: 1001;
+	--z-navbar: 100;
+	--z-hamburger: 110;
+	--z-what-is-a-home: 200;
 
 	@include mq($from: tablet) {}
 
@@ -133,6 +134,10 @@ select {
 article {
 	display: flex;
 	flex-direction: row;
+
+	@include mq($until: tablet) {
+		flex-direction: column;
+	}
 
 	>div {
 		display: flex;
