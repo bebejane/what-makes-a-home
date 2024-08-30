@@ -9,6 +9,7 @@ import { usePathname } from "next/navigation";
 import type { Menu } from "../../lib/menu";
 import { useScrollInfo } from 'next-dato-utils/hooks'
 import { Spin as Hamburger } from 'hamburger-react'
+import { useStore } from "../../lib/store";
 
 export type Props = {
   menu: Menu
@@ -19,8 +20,7 @@ export default function NavBar({ menu, }: Props) {
   const pathname = usePathname()
   const { scrolledPosition } = useScrollInfo()
   const [open, setOpen] = useState(false)
-  const [isScrolledDown, setIsScrolledDown] = useState(false)
-  const [showNewsletter, setShowNewsletter] = useState(false)
+  const [inIntro] = useStore(state => [state.inIntro]);
 
   const handleClick = () => {
     setOpen(false)
@@ -28,7 +28,7 @@ export default function NavBar({ menu, }: Props) {
 
   return (
     <>
-      <nav className={cn(s.navbar, open && s.open)}>
+      <nav className={cn(s.navbar, open && s.open, inIntro && s.intro)}>
         <ul>
           {menu.map((item, i) => {
             const active = pathname === item.slug

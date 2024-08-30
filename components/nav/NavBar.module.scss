@@ -3,6 +3,12 @@
   bottom: var(--outer-margin);
   right: var(--outer-margin);
   z-index: var(--z-navbar);
+  transition: opacity 0.25s ease-in-out;
+  opacity: 1;
+
+  &.intro {
+    opacity: 0;
+  }
 
   ul {
     list-style: none;
@@ -35,10 +41,13 @@
     transition: transform 0.25s ease-in-out;
     transform: translateX(-100%);
     background-color: var(--white);
+    opacity: 1;
 
     &.open {
       transform: translateX(0%);
     }
+
+
 
     ul {
       padding-top: calc(2rem + var(--outer-margin));
