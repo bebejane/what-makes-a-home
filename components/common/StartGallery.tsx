@@ -5,9 +5,11 @@ import cn from 'classnames'
 import { Image } from 'react-datocms'
 import { EffectFade, Autoplay } from 'swiper'
 import { VideoPlayer } from "next-dato-utils/components";
+import { sleep } from 'next-dato-utils/utils';
 import SwiperCore from 'swiper'
 import React, { useState, useRef, useEffect } from 'react';
 import { interval } from './WhatMakesAHome';
+import { useStore } from '../../lib/store'
 
 SwiperCore.use([EffectFade, Autoplay]);
 
@@ -17,31 +19,25 @@ export type Props = {
 
 export default function StartGallery({ slides }: Props) {
 
-  const [first, setFirst] = useState(true)
   const [index, setIndex] = useState<number>(-1)
-  const timeoutRef = useRef<any>(null)
+  const [inIntro] = useStore(state => [state.inIntro]);
 
   useEffect(() => {
 
-    clearTimeout(timeoutRef.current)
-
     const update = async () => {
-      if (first)
-        await new Promise((resolve) => timeoutRef.current = setTimeout(resolve, interval * slides.length))
+      if (inIntro)
+        await sleep(interval * slides.length)
 
       for (let i = 0; i < slides.length; i++) {
         setIndex(i)
-        await new Promise((resolve) => timeoutRef.current = setTimeout(resolve, slides[i].duration * 1000))
+        await sleep(slides[i].duration * 1000)
       }
-      setFirst(false)
       update()
     }
 
     update()
 
-    return () => clearTimeout(timeoutRef.current)
-
-  }, [first, slides])
+  }, [inIntro, slides])
 
   return (
     <div className={cn(s.gallery, index === -1 && s.hide)}>

@@ -1,10 +1,21 @@
 'use client'
 
 import s from './WhatMakesAHome.module.scss'
-
+import { useStore } from '@lib/store';
+import { useEffect } from 'react';
 export const interval = 1000;
 
 export default function WhatMakesAHome() {
+
+  const [inIntro, setInIntro] = useStore(state => [state.inIntro, state.setInIntro]);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setInIntro(false);
+    }, interval * 3);
+
+    return () => clearTimeout(timeout);
+  }, [setInIntro]);
 
   return (
     <div className={s.intro} style={{ "--interval": `${interval}ms` } as React.CSSProperties}>

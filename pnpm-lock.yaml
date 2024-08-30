@@ -40,49 +40,49 @@ dependencies:
     version: 8.2.0(embla-carousel@8.2.0)
   embla-carousel-react:
     specifier: ^8.2.0
-    version: 8.2.0(react@18.3.0-canary-bbb9cb116-20231117)
+    version: 8.2.0(react@18.3.1)
   graphql:
     specifier: ^16.8.1
     version: 16.8.1
   hamburger-react:
     specifier: ^2.5.1
-    version: 2.5.1(react@18.3.0-canary-bbb9cb116-20231117)
+    version: 2.5.1(react@18.3.1)
   is-integer:
     specifier: ^1.0.7
     version: 1.0.7
   next:
     specifier: 14.2.7
-    version: 14.2.7(@babel/core@7.24.5)(react-dom@18.3.0-canary-bbb9cb116-20231117)(react@18.3.0-canary-bbb9cb116-20231117)(sass@1.77.2)
+    version: 14.2.7(@babel/core@7.24.5)(react-dom@18.3.1)(react@18.3.1)(sass@1.77.2)
   next-dato-utils:
     specifier: github:bebejane/next-dato-utils
-    version: github.com/bebejane/next-dato-utils/376e26b861275404a2951d2ce5d5e8f7b9f2c37b(@datocms/cma-client-browser@3.3.1)(@datocms/cma-client-node@3.3.1)(@datocms/cma-client@3.3.8)(@types/react-dom@18.3.0)(@types/react@18.3.2)(datocms-structured-text-utils@4.0.0)(graphql@16.8.1)(postmark@4.0.5)(react-datocms@6.0.1)(react-dom@18.3.0-canary-bbb9cb116-20231117)(react@18.3.0-canary-bbb9cb116-20231117)(sass@1.77.2)(zod@3.23.8)
+    version: github.com/bebejane/next-dato-utils/376e26b861275404a2951d2ce5d5e8f7b9f2c37b(@datocms/cma-client-browser@3.3.1)(@datocms/cma-client-node@3.3.1)(@datocms/cma-client@3.3.12)(@types/react-dom@18.3.0)(@types/react@18.3.2)(datocms-structured-text-utils@4.0.0)(graphql@16.8.1)(postmark@4.0.5)(react-datocms@6.0.1)(react-dom@18.3.1)(react@18.3.1)(sass@1.77.2)(zod@3.23.8)
   next-seo:
     specifier: ^5.15.0
-    version: 5.15.0(next@14.2.7)(react-dom@18.3.0-canary-bbb9cb116-20231117)(react@18.3.0-canary-bbb9cb116-20231117)
+    version: 5.15.0(next@14.2.7)(react-dom@18.3.1)(react@18.3.1)
   next-sitemap:
     specifier: ^3.1.55
     version: 3.1.55(@next/env@13.5.6)(next@14.2.7)
   nextjs-google-analytics:
     specifier: ^2.3.3
-    version: 2.3.3(next@14.2.7)(react@18.3.0-canary-bbb9cb116-20231117)
+    version: 2.3.3(next@14.2.7)(react@18.3.1)
   object-traversal:
     specifier: ^1.0.1
     version: 1.0.1
   react:
-    specifier: 18.3.0-canary-bbb9cb116-20231117
-    version: 18.3.0-canary-bbb9cb116-20231117
+    specifier: 18.3.1
+    version: 18.3.1
   react-datocms:
     specifier: ^6.0.1
-    version: 6.0.1(@types/react-dom@18.3.0)(@types/react@18.3.2)(graphql@16.8.1)(react-dom@18.3.0-canary-bbb9cb116-20231117)(react@18.3.0-canary-bbb9cb116-20231117)
+    version: 6.0.1(@types/react-dom@18.3.0)(@types/react@18.3.2)(graphql@16.8.1)(react-dom@18.3.1)(react@18.3.1)
   react-dom:
-    specifier: 18.3.0-canary-bbb9cb116-20231117
-    version: 18.3.0-canary-bbb9cb116-20231117(react@18.3.0-canary-bbb9cb116-20231117)
+    specifier: 18.3.1
+    version: 18.3.1(react@18.3.1)
   react-icons:
     specifier: ^5.2.1
-    version: 5.2.1(react@18.3.0-canary-bbb9cb116-20231117)
+    version: 5.2.1(react@18.3.1)
   rooks:
     specifier: ^7.14.1
-    version: 7.14.1(react-dom@18.3.0-canary-bbb9cb116-20231117)(react@18.3.0-canary-bbb9cb116-20231117)
+    version: 7.14.1(react-dom@18.3.1)(react@18.3.1)
   sass:
     specifier: ^1.77.2
     version: 1.77.2
@@ -94,7 +94,7 @@ dependencies:
     version: 3.23.8
   zustand:
     specifier: ^4.5.2
-    version: 4.5.2(@types/react@18.3.2)(react@18.3.0-canary-bbb9cb116-20231117)
+    version: 4.5.2(@types/react@18.3.2)(react@18.3.1)
 
 devDependencies:
   '@graphql-codegen/cli':
@@ -106,6 +106,9 @@ devDependencies:
   '@graphql-codegen/introspection':
     specifier: ^4.0.0
     version: 4.0.3(graphql@16.8.1)
+  '@graphql-codegen/schema-ast':
+    specifier: ^4.1.0
+    version: 4.1.0(graphql@16.8.1)
   '@graphql-codegen/typed-document-node':
     specifier: ^5.0.1
     version: 5.0.7(graphql@16.8.1)
@@ -776,10 +779,10 @@ packages:
       uuid: 9.0.1
     dev: false
 
-  /@datocms/cma-client@3.3.8:
-    resolution: {integrity: sha512-ud2jtQ1YVuniltO/+HjbaW4mFKB5X8fVIXqfRAkbELkw22R/HWmtSIV3aqC/jy6ZVWiTUbIM6DMu6H6O7cG7ng==}
+  /@datocms/cma-client@3.3.12:
+    resolution: {integrity: sha512-atPin559flVi27s6s+kYyuSbE4VTkEf1+sbgTBklfx4I2yuAHUYdUKMFFoEIiBnEEsGMf9orsphK0Rt3xyT/qg==}
     dependencies:
-      '@datocms/rest-client-utils': 3.3.5
+      '@datocms/rest-client-utils': 3.3.10
       uuid: 9.0.1
     dev: false
 
@@ -789,8 +792,8 @@ packages:
       async-scheduler: 1.4.4
     dev: false
 
-  /@datocms/rest-client-utils@3.3.5:
-    resolution: {integrity: sha512-2dCkz1LF8uny1Ym7ZIacoD7ACKNryKtqr6GbILYMlyCrOIgaQpLgZT9Djvrl2FMymJDEt2C5ZH9hE/mp6Tr0QQ==}
+  /@datocms/rest-client-utils@3.3.10:
+    resolution: {integrity: sha512-9USwVPa/DZmNjGaXh+vDdAZUHiGdd7BjDn1I7aBrlZ17qejI1bk04pNykrJYn5inrSn9n/Nw+hPl8ix7rKb/xw==}
     dependencies:
       async-scheduler: 1.4.4
     dev: false
@@ -1252,8 +1255,8 @@ packages:
       tslib: 2.4.1
     dev: true
 
-  /@graphql-codegen/schema-ast@4.0.2(graphql@16.8.1):
-    resolution: {integrity: sha512-5mVAOQQK3Oz7EtMl/l3vOQdc2aYClUzVDHHkMvZlunc+KlGgl81j8TLa+X7ANIllqU4fUEsQU3lJmk4hXP6K7Q==}
+  /@graphql-codegen/schema-ast@4.1.0(graphql@16.8.1):
+    resolution: {integrity: sha512-kZVn0z+th9SvqxfKYgztA6PM7mhnSZaj4fiuBWvMTqA+QqQ9BBed6Pz41KuD/jr0gJtnlr2A4++/0VlpVbCTmQ==}
     peerDependencies:
       graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
     dependencies:
@@ -1360,7 +1363,7 @@ packages:
       graphql: ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
     dependencies:
       '@graphql-codegen/plugin-helpers': 5.0.4(graphql@16.8.1)
-      '@graphql-codegen/schema-ast': 4.0.2(graphql@16.8.1)
+      '@graphql-codegen/schema-ast': 4.1.0(graphql@16.8.1)
       '@graphql-codegen/visitor-plugin-common': 5.2.0(graphql@16.8.1)
       auto-bind: 4.0.0
       graphql: 16.8.1
@@ -1909,7 +1912,7 @@ packages:
     resolution: {integrity: sha512-gbkePEBupNydxCelHCESvFSFM8XPh1Zs/OAVRW/rKpEqPAl5PbOM90Si8mv9bvnR53uPD2s/FiRxdvSejpRJew==}
     dev: true
 
-  /@mux/mux-player-react@2.6.0(@types/react-dom@18.3.0)(@types/react@18.3.2)(react-dom@18.3.0-canary-bbb9cb116-20231117)(react@18.3.0-canary-bbb9cb116-20231117):
+  /@mux/mux-player-react@2.6.0(@types/react-dom@18.3.0)(@types/react@18.3.2)(react-dom@18.3.1)(react@18.3.1):
     resolution: {integrity: sha512-OtT44Mv3vhhMAuAFLGR1SVuohsCa1hWedW4ro108Z83kzEb0DW7p4q4Z+44eih4N8fkHunn2vKDoszNhCc83zw==}
     peerDependencies:
       '@types/react': ^17.0.0 || ^18
@@ -1927,8 +1930,8 @@ packages:
       '@types/react': 18.3.2
       '@types/react-dom': 18.3.0
       prop-types: 15.8.1
-      react: 18.3.0-canary-bbb9cb116-20231117
-      react-dom: 18.3.0-canary-bbb9cb116-20231117(react@18.3.0-canary-bbb9cb116-20231117)
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
     dev: false
 
   /@mux/mux-player@2.6.0:
@@ -3452,14 +3455,14 @@ packages:
       embla-carousel: 8.2.0
     dev: false
 
-  /embla-carousel-react@8.2.0(react@18.3.0-canary-bbb9cb116-20231117):
+  /embla-carousel-react@8.2.0(react@18.3.1):
     resolution: {integrity: sha512-dWqbmaEBQjeAcy/EKrcAX37beVr0ubXuHPuLZkx27z58V1FIvRbbMb4/c3cLZx0PAv/ofngX2QFrwUB+62SPnw==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.1 || ^18.0.0
     dependencies:
       embla-carousel: 8.2.0
       embla-carousel-reactive-utils: 8.2.0(embla-carousel@8.2.0)
-      react: 18.3.0-canary-bbb9cb116-20231117
+      react: 18.3.1
     dev: false
 
   /embla-carousel-reactive-utils@8.2.0(embla-carousel@8.2.0):
@@ -4350,12 +4353,12 @@ packages:
     resolution: {integrity: sha512-59LZHPdGZVh695Ud9lRzPBVTtlX9ZCV150Er2W43ro37wVof0ctenSaskPPjN7lVTIN8mSZt8PHUNKZuNQUuxw==}
     engines: {node: ^12.22.0 || ^14.16.0 || ^16.0.0 || >=17.0.0}
 
-  /hamburger-react@2.5.1(react@18.3.0-canary-bbb9cb116-20231117):
+  /hamburger-react@2.5.1(react@18.3.1):
     resolution: {integrity: sha512-XlTIinYeYzLu76q4Vd9olwOJP0hFgAeZfJFX6tTT/ufTLhmOjI77CGFYIwGc6gcDeeT86660ZoKx3/L67vdZEw==}
     peerDependencies:
       react: ^16.8 || ^17 || ^18
     dependencies:
-      react: 18.3.0-canary-bbb9cb116-20231117
+      react: 18.3.1
     dev: false
 
   /has-bigints@1.0.2:
@@ -5651,16 +5654,16 @@ packages:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
     dev: true
 
-  /next-seo@5.15.0(next@14.2.7)(react-dom@18.3.0-canary-bbb9cb116-20231117)(react@18.3.0-canary-bbb9cb116-20231117):
+  /next-seo@5.15.0(next@14.2.7)(react-dom@18.3.1)(react@18.3.1):
     resolution: {integrity: sha512-LGbcY91yDKGMb7YI+28n3g+RuChUkt6pXNpa8FkfKkEmNiJkeRDEXTnnjVtwT9FmMhG6NH8qwHTelGrlYm9rgg==}
     peerDependencies:
       next: ^8.1.1-canary.54 || >=9.0.0
       react: '>=16.0.0'
       react-dom: '>=16.0.0'
     dependencies:
-      next: 14.2.7(@babel/core@7.24.5)(react-dom@18.3.0-canary-bbb9cb116-20231117)(react@18.3.0-canary-bbb9cb116-20231117)(sass@1.77.2)
-      react: 18.3.0-canary-bbb9cb116-20231117
-      react-dom: 18.3.0-canary-bbb9cb116-20231117(react@18.3.0-canary-bbb9cb116-20231117)
+      next: 14.2.7(@babel/core@7.24.5)(react-dom@18.3.1)(react@18.3.1)(sass@1.77.2)
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
     dev: false
 
   /next-sitemap@3.1.55(@next/env@13.5.6)(next@14.2.7):
@@ -5674,10 +5677,10 @@ packages:
       '@corex/deepmerge': 4.0.43
       '@next/env': 13.5.6
       minimist: 1.2.8
-      next: 14.2.7(@babel/core@7.24.5)(react-dom@18.3.0-canary-bbb9cb116-20231117)(react@18.3.0-canary-bbb9cb116-20231117)(sass@1.77.2)
+      next: 14.2.7(@babel/core@7.24.5)(react-dom@18.3.1)(react@18.3.1)(sass@1.77.2)
     dev: false
 
-  /next@14.2.7(@babel/core@7.24.5)(react-dom@18.3.0-canary-bbb9cb116-20231117)(react@18.3.0-canary-bbb9cb116-20231117)(sass@1.77.2):
+  /next@14.2.7(@babel/core@7.24.5)(react-dom@18.3.1)(react@18.3.1)(sass@1.77.2):
     resolution: {integrity: sha512-4Qy2aK0LwH4eQiSvQWyKuC7JXE13bIopEQesWE0c/P3uuNRnZCQanI0vsrMLmUQJLAto+A+/8+sve2hd+BQuOQ==}
     engines: {node: '>=18.17.0'}
     hasBin: true
@@ -5701,10 +5704,10 @@ packages:
       caniuse-lite: 1.0.30001620
       graceful-fs: 4.2.11
       postcss: 8.4.31
-      react: 18.3.0-canary-bbb9cb116-20231117
-      react-dom: 18.3.0-canary-bbb9cb116-20231117(react@18.3.0-canary-bbb9cb116-20231117)
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
       sass: 1.77.2
-      styled-jsx: 5.1.1(@babel/core@7.24.5)(react@18.3.0-canary-bbb9cb116-20231117)
+      styled-jsx: 5.1.1(@babel/core@7.24.5)(react@18.3.1)
     optionalDependencies:
       '@next/swc-darwin-arm64': 14.2.7
       '@next/swc-darwin-x64': 14.2.7
@@ -5720,14 +5723,14 @@ packages:
       - babel-plugin-macros
     dev: false
 
-  /nextjs-google-analytics@2.3.3(next@14.2.7)(react@18.3.0-canary-bbb9cb116-20231117):
+  /nextjs-google-analytics@2.3.3(next@14.2.7)(react@18.3.1):
     resolution: {integrity: sha512-Y6sI6A7wt5dji8hYBnVkOh9LTyImSLFZXx3FpyQgVW7W4b4qEFHjH2u3fhDJsrRZeLlUGM8/RuHD/mhHc2Axfg==}
     peerDependencies:
       next: '>=11.0.0'
       react: '>=17.0.0'
     dependencies:
-      next: 14.2.7(@babel/core@7.24.5)(react-dom@18.3.0-canary-bbb9cb116-20231117)(react@18.3.0-canary-bbb9cb116-20231117)(sass@1.77.2)
-      react: 18.3.0-canary-bbb9cb116-20231117
+      next: 14.2.7(@babel/core@7.24.5)(react-dom@18.3.1)(react@18.3.1)(sass@1.77.2)
+      react: 18.3.1
     optionalDependencies:
       fsevents: 2.3.3
     dev: false
@@ -6199,20 +6202,20 @@ packages:
       performance-now: 2.1.0
     dev: false
 
-  /react-datocms@6.0.1(@types/react-dom@18.3.0)(@types/react@18.3.2)(graphql@16.8.1)(react-dom@18.3.0-canary-bbb9cb116-20231117)(react@18.3.0-canary-bbb9cb116-20231117):
+  /react-datocms@6.0.1(@types/react-dom@18.3.0)(@types/react@18.3.2)(graphql@16.8.1)(react-dom@18.3.1)(react@18.3.1):
     resolution: {integrity: sha512-8uoG/kkl4qFeJ/QOijTD7tejbMPuswwUmLD3nBlaHdIxyFIMbKA7Zd/zwnM18s4ilX9NnQPRBPeh/Q3+MSquZQ==}
     engines: {node: '>=8.0.0'}
     peerDependencies:
       react: '>= 16.12.0'
     dependencies:
-      '@mux/mux-player-react': 2.6.0(@types/react-dom@18.3.0)(@types/react@18.3.2)(react-dom@18.3.0-canary-bbb9cb116-20231117)(react@18.3.0-canary-bbb9cb116-20231117)
+      '@mux/mux-player-react': 2.6.0(@types/react-dom@18.3.0)(@types/react@18.3.2)(react-dom@18.3.1)(react@18.3.1)
       datocms-listen: 0.1.15(graphql@16.8.1)
       datocms-structured-text-generic-html-renderer: 2.1.12
       datocms-structured-text-utils: 2.1.12
-      react: 18.3.0-canary-bbb9cb116-20231117
-      react-intersection-observer: 9.10.2(react-dom@18.3.0-canary-bbb9cb116-20231117)(react@18.3.0-canary-bbb9cb116-20231117)
+      react: 18.3.1
+      react-intersection-observer: 9.10.2(react-dom@18.3.1)(react@18.3.1)
       react-string-replace: 1.1.1
-      use-deep-compare-effect: 1.8.1(react@18.3.0-canary-bbb9cb116-20231117)
+      use-deep-compare-effect: 1.8.1(react@18.3.1)
     transitivePeerDependencies:
       - '@types/react'
       - '@types/react-dom'
@@ -6220,25 +6223,25 @@ packages:
       - react-dom
     dev: false
 
-  /react-dom@18.3.0-canary-bbb9cb116-20231117(react@18.3.0-canary-bbb9cb116-20231117):
-    resolution: {integrity: sha512-IqCGG/8HSZlQoAlj7regk6q2H7buXAV5lyB3XEJ0PEQEBYNv+g5hBnkVfFxaZTtYFaP2oeCMwEx39hZfEDaiNQ==}
+  /react-dom@18.3.1(react@18.3.1):
+    resolution: {integrity: sha512-5m4nQKp+rZRb09LNH59GM4BxTh9251/ylbKIbpe7TpGxfJ+9kv6BLkLBXIjjspbgbnIBNqlI23tRnTWT0snUIw==}
     peerDependencies:
-      react: 18.3.0-canary-bbb9cb116-20231117
+      react: ^18.3.1
     dependencies:
       loose-envify: 1.4.0
-      react: 18.3.0-canary-bbb9cb116-20231117
-      scheduler: 0.24.0-canary-bbb9cb116-20231117
+      react: 18.3.1
+      scheduler: 0.23.2
     dev: false
 
-  /react-icons@5.2.1(react@18.3.0-canary-bbb9cb116-20231117):
+  /react-icons@5.2.1(react@18.3.1):
     resolution: {integrity: sha512-zdbW5GstTzXaVKvGSyTaBalt7HSfuK5ovrzlpyiWHAFXndXTdd/1hdDHI4xBM1Mn7YriT6aqESucFl9kEXzrdw==}
     peerDependencies:
       react: '*'
     dependencies:
-      react: 18.3.0-canary-bbb9cb116-20231117
+      react: 18.3.1
     dev: false
 
-  /react-intersection-observer@9.10.2(react-dom@18.3.0-canary-bbb9cb116-20231117)(react@18.3.0-canary-bbb9cb116-20231117):
+  /react-intersection-observer@9.10.2(react-dom@18.3.1)(react@18.3.1):
     resolution: {integrity: sha512-j2hGADK2hCbAlfaq6L3tVLb4iqngoN7B1fT16MwJ4J16YW/vWLcmAIinLsw0lgpZeMi4UDUWtHC9QDde0/P1yQ==}
     peerDependencies:
       react: ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
@@ -6247,14 +6250,14 @@ packages:
       react-dom:
         optional: true
     dependencies:
-      react: 18.3.0-canary-bbb9cb116-20231117
-      react-dom: 18.3.0-canary-bbb9cb116-20231117(react@18.3.0-canary-bbb9cb116-20231117)
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
     dev: false
 
   /react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
 
-  /react-markdown@9.0.1(@types/react@18.3.2)(react@18.3.0-canary-bbb9cb116-20231117):
+  /react-markdown@9.0.1(@types/react@18.3.2)(react@18.3.1):
     resolution: {integrity: sha512-186Gw/vF1uRkydbsOIkcGXw7aHq0sZOCRFFjGrr7b9+nVZg4UfA4enXCaxm4fUzecU38sWfrNDitGhshuU7rdg==}
     peerDependencies:
       '@types/react': '>=18'
@@ -6266,7 +6269,7 @@ packages:
       hast-util-to-jsx-runtime: 2.3.0
       html-url-attributes: 3.0.0
       mdast-util-to-hast: 13.1.0
-      react: 18.3.0-canary-bbb9cb116-20231117
+      react: 18.3.1
       remark-parse: 11.0.0
       remark-rehype: 11.1.0
       unified: 11.0.4
@@ -6281,8 +6284,8 @@ packages:
     engines: {node: '>=0.12.0'}
     dev: false
 
-  /react@18.3.0-canary-bbb9cb116-20231117:
-    resolution: {integrity: sha512-zJ7KfrZrgeak9G+V+DhHZUJHMdVHzoPYyx0xRvdrs3dPGKYQdN10P/DWHrrO9d9kR9xEabKNLP/gpXioeMsRGQ==}
+  /react@18.3.1:
+    resolution: {integrity: sha512-wS+hAgJShR0KhEvPJArfuPVN1+Hz1t0Y6n5jLrGQbkb4urgPE/0Rve+1kMB1v/oWgHgm4WIcV+i7F2pTVj+2iQ==}
     engines: {node: '>=0.10.0'}
     dependencies:
       loose-envify: 1.4.0
@@ -6481,7 +6484,7 @@ packages:
       glob: 7.2.3
     dev: true
 
-  /rooks@7.14.1(react-dom@18.3.0-canary-bbb9cb116-20231117)(react@18.3.0-canary-bbb9cb116-20231117):
+  /rooks@7.14.1(react-dom@18.3.1)(react@18.3.1):
     resolution: {integrity: sha512-oPuLNGm3OaFm3WfZHzmDvJvRit8QrXGm9/Kn49Bz8lJUjkThSBtERWzuQ9wb5DveqrpUZvmNyBXjBE0KWVt13w==}
     engines: {node: '>=v10.24.1'}
     peerDependencies:
@@ -6491,9 +6494,9 @@ packages:
       fast-deep-equal: 3.1.3
       lodash.debounce: 4.0.8
       raf: 3.4.1
-      react: 18.3.0-canary-bbb9cb116-20231117
-      react-dom: 18.3.0-canary-bbb9cb116-20231117(react@18.3.0-canary-bbb9cb116-20231117)
-      use-sync-external-store: 1.2.2(react@18.3.0-canary-bbb9cb116-20231117)
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+      use-sync-external-store: 1.2.2(react@18.3.1)
     dev: false
 
   /run-async@2.4.1:
@@ -6550,8 +6553,8 @@ packages:
       source-map-js: 1.2.0
     dev: false
 
-  /scheduler@0.24.0-canary-bbb9cb116-20231117:
-    resolution: {integrity: sha512-VdcDXtQfRhFoGE+9QH0Cv0ThdTjaYNMiicKnBdm/uv2bUDILm9quCNBwBWsLJURRWVNO/TBtorokusi6VRKnsg==}
+  /scheduler@0.23.2:
+    resolution: {integrity: sha512-UOShsPwz7NrMUqhR6t0hWjFduvOzbtv7toDH1/hIrfRNIDBnnBWd0CwJTGvTpngVlmwGCdP9/Zl/tVrDqcuYzQ==}
     dependencies:
       loose-envify: 1.4.0
     dev: false
@@ -6811,7 +6814,7 @@ packages:
       inline-style-parser: 0.2.3
     dev: false
 
-  /styled-jsx@5.1.1(@babel/core@7.24.5)(react@18.3.0-canary-bbb9cb116-20231117):
+  /styled-jsx@5.1.1(@babel/core@7.24.5)(react@18.3.1):
     resolution: {integrity: sha512-pW7uC1l4mBZ8ugbiZrcIsiIvVx1UmTfw7UkC3Um2tmfUq9Bhk8IiyEIPl6F8agHgjzku6j0xQEZbfA5uSgSaCw==}
     engines: {node: '>= 12.0.0'}
     peerDependencies:
@@ -6826,7 +6829,7 @@ packages:
     dependencies:
       '@babel/core': 7.24.5
       client-only: 0.0.1
-      react: 18.3.0-canary-bbb9cb116-20231117
+      react: 18.3.1
     dev: false
 
   /supports-color@5.5.0:
@@ -7154,7 +7157,7 @@ packages:
     resolution: {integrity: sha512-Qp95D4TPJl1kC9SKigDcqgyM2VDVO4RiJc2d4qe5GrYm+zbIQCWWKAFaJNQ4BhdFeDGwBmAxqJBwWSJDb9T3BQ==}
     dev: true
 
-  /use-deep-compare-effect@1.8.1(react@18.3.0-canary-bbb9cb116-20231117):
+  /use-deep-compare-effect@1.8.1(react@18.3.1):
     resolution: {integrity: sha512-kbeNVZ9Zkc0RFGpfMN3MNfaKNvcLNyxOAAd9O4CBZ+kCBXXscn9s/4I+8ytUER4RDpEYs5+O6Rs4PqiZ+rHr5Q==}
     engines: {node: '>=10', npm: '>=6'}
     peerDependencies:
@@ -7162,23 +7165,23 @@ packages:
     dependencies:
       '@babel/runtime': 7.24.5
       dequal: 2.0.3
-      react: 18.3.0-canary-bbb9cb116-20231117
+      react: 18.3.1
     dev: false
 
-  /use-sync-external-store@1.2.0(react@18.3.0-canary-bbb9cb116-20231117):
+  /use-sync-external-store@1.2.0(react@18.3.1):
     resolution: {integrity: sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
     dependencies:
-      react: 18.3.0-canary-bbb9cb116-20231117
+      react: 18.3.1
     dev: false
 
-  /use-sync-external-store@1.2.2(react@18.3.0-canary-bbb9cb116-20231117):
+  /use-sync-external-store@1.2.2(react@18.3.1):
     resolution: {integrity: sha512-PElTlVMwpblvbNqQ82d2n6RjStvdSoNe9FG28kNfz3WiXilJm4DdNkEzRhCZuIDwY8U08WVihhGR5iRqAwfDiw==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
     dependencies:
-      react: 18.3.0-canary-bbb9cb116-20231117
+      react: 18.3.1
     dev: false
 
   /util-deprecate@1.0.2:
@@ -7447,7 +7450,7 @@ packages:
     resolution: {integrity: sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g==}
     dev: false
 
-  /zustand@4.5.2(@types/react@18.3.2)(react@18.3.0-canary-bbb9cb116-20231117):
+  /zustand@4.5.2(@types/react@18.3.2)(react@18.3.1):
     resolution: {integrity: sha512-2cN1tPkDVkwCy5ickKrI7vijSjPksFRfqS6237NzT0vqSsztTNnQdHw9mmN7uBdk3gceVXU0a+21jFzFzAc9+g==}
     engines: {node: '>=12.7.0'}
     peerDependencies:
@@ -7463,15 +7466,15 @@ packages:
         optional: true
     dependencies:
       '@types/react': 18.3.2
-      react: 18.3.0-canary-bbb9cb116-20231117
-      use-sync-external-store: 1.2.0(react@18.3.0-canary-bbb9cb116-20231117)
+      react: 18.3.1
+      use-sync-external-store: 1.2.0(react@18.3.1)
     dev: false
 
   /zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
     dev: false
 
-  github.com/bebejane/next-dato-utils/376e26b861275404a2951d2ce5d5e8f7b9f2c37b(@datocms/cma-client-browser@3.3.1)(@datocms/cma-client-node@3.3.1)(@datocms/cma-client@3.3.8)(@types/react-dom@18.3.0)(@types/react@18.3.2)(datocms-structured-text-utils@4.0.0)(graphql@16.8.1)(postmark@4.0.5)(react-datocms@6.0.1)(react-dom@18.3.0-canary-bbb9cb116-20231117)(react@18.3.0-canary-bbb9cb116-20231117)(sass@1.77.2)(zod@3.23.8):
+  github.com/bebejane/next-dato-utils/376e26b861275404a2951d2ce5d5e8f7b9f2c37b(@datocms/cma-client-browser@3.3.1)(@datocms/cma-client-node@3.3.1)(@datocms/cma-client@3.3.12)(@types/react-dom@18.3.0)(@types/react@18.3.2)(datocms-structured-text-utils@4.0.0)(graphql@16.8.1)(postmark@4.0.5)(react-datocms@6.0.1)(react-dom@18.3.1)(react@18.3.1)(sass@1.77.2)(zod@3.23.8):
     resolution: {tarball: https://codeload.github.com/bebejane/next-dato-utils/tar.gz/376e26b861275404a2951d2ce5d5e8f7b9f2c37b}
     id: github.com/bebejane/next-dato-utils/376e26b861275404a2951d2ce5d5e8f7b9f2c37b
     name: next-dato-utils
@@ -7493,7 +7496,7 @@ packages:
       sass: '>=1.69.0'
       zod: '>=3.22.0'
     dependencies:
-      '@datocms/cma-client': 3.3.8
+      '@datocms/cma-client': 3.3.12
       '@datocms/cma-client-browser': 3.3.1
       '@datocms/cma-client-node': 3.3.1
       '@types/is-integer': 1.0.2
@@ -7509,10 +7512,10 @@ packages:
       object-traversal: 1.0.1
       postmark: 4.0.5
       pretty-bytes: 6.1.1
-      react: 18.3.0-canary-bbb9cb116-20231117
-      react-datocms: 6.0.1(@types/react-dom@18.3.0)(@types/react@18.3.2)(graphql@16.8.1)(react-dom@18.3.0-canary-bbb9cb116-20231117)(react@18.3.0-canary-bbb9cb116-20231117)
-      react-dom: 18.3.0-canary-bbb9cb116-20231117(react@18.3.0-canary-bbb9cb116-20231117)
-      react-markdown: 9.0.1(@types/react@18.3.2)(react@18.3.0-canary-bbb9cb116-20231117)
+      react: 18.3.1
+      react-datocms: 6.0.1(@types/react-dom@18.3.0)(@types/react@18.3.2)(graphql@16.8.1)(react-dom@18.3.1)(react@18.3.1)
+      react-dom: 18.3.1(react@18.3.1)
+      react-markdown: 9.0.1(@types/react@18.3.2)(react@18.3.1)
       remark-breaks: 4.0.0
       remark-gfm: 4.0.0
       sass: 1.77.2
