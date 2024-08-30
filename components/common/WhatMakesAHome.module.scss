@@ -1,4 +1,6 @@
 .intro {
+  --interval: 1000ms;
+
   display: block;
   position: fixed;
   top: 0;
@@ -19,8 +21,6 @@
     animation-name: show;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
-
-    --interval: 1s;
 
     &:nth-child(1) {
       top: -0.1em;

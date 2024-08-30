@@ -7,6 +7,7 @@ import { EffectFade, Autoplay } from 'swiper'
 import { VideoPlayer } from "next-dato-utils/components";
 import SwiperCore from 'swiper'
 import React, { useState, useRef, useEffect } from 'react';
+import { interval } from './WhatMakesAHome';
 
 SwiperCore.use([EffectFade, Autoplay]);
 
@@ -15,8 +16,9 @@ export type Props = {
 }
 
 export default function StartGallery({ slides }: Props) {
-  const [loaded, setLoaded] = useState<any>({})
-  const [index, setIndex] = useState(0)
+
+  const [first, setFirst] = useState(true)
+  const [index, setIndex] = useState<number>(-1)
   const timeoutRef = useRef<any>(null)
 
   useEffect(() => {
@@ -24,12 +26,14 @@ export default function StartGallery({ slides }: Props) {
     clearTimeout(timeoutRef.current)
 
     const update = async () => {
+      if (first)
+        await new Promise((resolve) => timeoutRef.current = setTimeout(resolve, interval * slides.length))
 
       for (let i = 0; i < slides.length; i++) {
         setIndex(i)
         await new Promise((resolve) => timeoutRef.current = setTimeout(resolve, slides[i].duration * 1000))
       }
-
+      setFirst(false)
       update()
     }
 
@@ -37,11 +41,10 @@ export default function StartGallery({ slides }: Props) {
 
     return () => clearTimeout(timeoutRef.current)
 
-  }, [slides])
-
+  }, [first, slides])
 
   return (
-    <div className={s.gallery}>
+    <div className={cn(s.gallery, index === -1 && s.hide)}>
       <ul>
         {slides.map((slide, idx) =>
           <li key={idx} className={cn(s.slide, idx !== index && s.hide)}>
@@ -77,9 +80,10 @@ const TextSlide = ({ slide }: { slide: TextBlockRecord }) => {
 }
 
 const VideoSlide = ({ slide }: { slide: VideoBlockRecord }) => {
+
   return (
     <div className={s.videoSlide}>
-      <VideoPlayer data={slide} />
+      <VideoPlayer data={slide.video} />
     </div>
   )
 }
