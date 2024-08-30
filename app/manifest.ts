@@ -2,13 +2,13 @@ import { MetadataRoute } from 'next'
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Humaneight',
-    short_name: 'Humaneight',
-    description: 'Humaneight',
+    name: 'What makes a home',
+    short_name: 'What makes a home',
+    description: 'What makes a home',
     start_url: '/',
     display: 'standalone',
     background_color: '#ffffff',
-    theme_color: '#f6f3ee',
+    theme_color: '#1700e2',
     icons: [
       {
         src: '/favicon.ico',

@@ -8,17 +8,20 @@ query Start {
 				image {
 					...ImageFragment
 				}
+				duration
 			}
 			... on TextBlockRecord {
 				id
 				text
 				smallHeadline
+				duration
 			}
 			... on VideoBlockRecord {
 				id
 				video {
 					...VideoFragment
 				}
+				duration
 			}
 		}
 	}

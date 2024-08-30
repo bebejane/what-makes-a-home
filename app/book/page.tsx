@@ -11,7 +11,10 @@ export default async function Page() {
   return (
     <>
       <article>
-        <h1>Book</h1>
+        <div></div>
+        <div>
+          <h1>Book</h1>
+        </div>
       </article>
     </>
   )

@@ -14,6 +14,7 @@ export default async function Page() {
   return (
     <>
       <article className={s.visit}>
+        <div></div>
         <div>
           <h1>Visit</h1>
           <ul>

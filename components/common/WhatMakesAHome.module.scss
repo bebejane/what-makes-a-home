@@ -15,21 +15,36 @@
     line-height: 1;
     z-index: 1000;
     color: var(--blue);
+    opacity: 0;
+    animation-name: show;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+
+    --interval: 1s;
 
     &:nth-child(1) {
       top: -0.1em;
       left: 0;
+      animation-delay: calc(1 * var(--interval));
     }
 
     &:nth-child(2) {
       top: 0;
       right: -0.1em;
       writing-mode: vertical-rl;
+      animation-delay: calc(2 * var(--interval));
     }
 
     &:nth-child(3) {
       bottom: -0.1em;
       left: 0;
+      animation-delay: calc(3 * var(--interval));
+    }
+
+    @keyframes show {
+      to {
+        opacity: 1;
+      }
     }
   }
 }

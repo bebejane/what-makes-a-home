@@ -1,57 +1,59 @@
 'use client'
-import "swiper/css";
+
 import s from './StartGallery.module.scss'
 import cn from 'classnames'
 import { Image } from 'react-datocms'
-import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectFade, Autoplay } from 'swiper'
 import { VideoPlayer } from "next-dato-utils/components";
 import SwiperCore from 'swiper'
 import React, { useState, useRef, useEffect } from 'react';
-import type { Swiper as SwiperType } from 'swiper'
 
 SwiperCore.use([EffectFade, Autoplay]);
 
 export type Props = {
-  slides: StartQuery['start']['slideshow']
+  slides: (ImageBlockRecord | TextBlockRecord | VideoBlockRecord)[]
 }
 
 export default function StartGallery({ slides }: Props) {
-
-  const swiperRef = useRef<SwiperType | undefined>()
-  const [realIndex, setRealIndex] = useState(0)
-  const [title, setTitle] = useState<string>()
   const [loaded, setLoaded] = useState<any>({})
-  const [initLoaded, setInitLoaded] = useState(false)
   const [index, setIndex] = useState(0)
+  const timeoutRef = useRef<any>(null)
+
+  useEffect(() => {
+
+    clearTimeout(timeoutRef.current)
+
+    const update = async () => {
+
+      for (let i = 0; i < slides.length; i++) {
+        setIndex(i)
+        await new Promise((resolve) => timeoutRef.current = setTimeout(resolve, slides[i].duration * 1000))
+      }
+
+      update()
+    }
+
+    update()
+
+    return () => clearTimeout(timeoutRef.current)
+
+  }, [slides])
 
 
   return (
     <div className={s.gallery}>
-      <Swiper
-        id={`main-gallery`}
-        className={s.swiper}
-        loop={true}
-        spaceBetween={0}
-        centeredSlides={true}
-        slidesPerView={1}
-        autoplay={{ delay: 1000 }}
-        initialSlide={index}
-        onSlideChange={({ realIndex }) => setRealIndex(realIndex)}
-        onSwiper={(swiper) => swiperRef.current = swiper}
-      >
+      <ul>
         {slides.map((slide, idx) =>
-          <SwiperSlide key={idx} className={cn(s.slide)}>
+          <li key={idx} className={cn(s.slide, idx !== index && s.hide)}>
             {slide.__typename === 'ImageBlockRecord' && <ImageSlide slide={slide as ImageBlockRecord} />}
             {slide.__typename === 'TextBlockRecord' && <TextSlide slide={slide as TextBlockRecord} />}
             {slide.__typename === 'VideoBlockRecord' && <VideoSlide slide={slide as VideoBlockRecord} />}
-          </SwiperSlide>
+          </li>
         )}
-      </Swiper>
+      </ul>
     </div>
   )
 }
-
 
 const ImageSlide = ({ slide }: { slide: ImageBlockRecord }) => {
   return (

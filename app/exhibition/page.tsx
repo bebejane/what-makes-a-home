@@ -14,7 +14,9 @@ export default async function Page() {
     <>
       <article>
         <div>
-          <Image data={exhibition.image.responsiveImage} />
+          <figure>
+            <Image data={exhibition.image.responsiveImage} />
+          </figure>
         </div>
         <div>
           <h1>The Exhibition</h1>

@@ -12,11 +12,9 @@
 	--z-navbar: 1000;
 	--z-what-is-a-home: 1001;
 
-	@include mq($from: tablet) {
-	}
+	@include mq($from: tablet) {}
 
-	@include mq($until: tablet) {
-	}
+	@include mq($until: tablet) {}
 }
 
 body {
@@ -71,21 +69,9 @@ a {
 	text-decoration: none;
 	color: var(--foreground);
 
-	&:hover {
-	}
+	&:hover {}
 
-	&:visited {
-	}
-}
-
-article p a {
-	text-decoration: underline 1px !important;
-	text-underline-offset: 0.15em;
-	text-decoration-thickness: 1px;
-
-	&:hover {
-		color: var(--beige-dark);
-	}
+	&:visited {}
 }
 
 .intro {
@@ -97,16 +83,13 @@ button {
 	color: var(--foreground);
 	border: 0;
 
-	@include mq($from: tablet) {
-	}
+	@include mq($from: tablet) {}
 
 	&.back {
-		@include mq($from: tablet) {
-		}
+		@include mq($from: tablet) {}
 	}
 
-	&:hover {
-	}
+	&:hover {}
 }
 
 figcaption {
@@ -115,14 +98,12 @@ figcaption {
 	margin-bottom: 1em;
 }
 
-hr {
-}
+hr {}
 
 input,
 textarea,
 select {
-	&:focus {
-	}
+	&:focus {}
 }
 
 select {
@@ -147,4 +128,29 @@ select {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+}
+
+article {
+	display: flex;
+	flex-direction: row;
+
+	>div {
+		display: flex;
+		flex-direction: column;
+		flex: 0 0 50%;
+		height: 100vh;
+
+		figure {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			max-height: 100vh;
+			padding: 10vw;
+
+			img {
+				object-fit: contain;
+				height: 100%;
+			}
+		}
+	}
 }
