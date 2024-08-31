@@ -3,7 +3,8 @@
 import s from './WhatMakesAHome.module.scss'
 import { useStore } from '@lib/store';
 import { useEffect } from 'react';
-export const interval = 1000;
+
+export const interval = 700;
 
 export default function WhatMakesAHome() {
 
@@ -12,7 +13,7 @@ export default function WhatMakesAHome() {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setInIntro(false);
-    }, interval * 3);
+    }, interval * 4);
 
     return () => clearTimeout(timeout);
   }, [setInIntro]);

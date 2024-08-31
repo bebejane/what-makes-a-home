@@ -1,8 +1,6 @@
-import s from './page.module.scss'
-import Link from "next/link"
 import { apiQuery } from 'next-dato-utils/api';
 import { DraftMode } from 'next-dato-utils/components';
-import { Image } from 'react-datocms';
+import Article from '../../components/common/Article';
 
 export default async function Page() {
 
@@ -10,12 +8,7 @@ export default async function Page() {
 
   return (
     <>
-      <article>
-        <div></div>
-        <div>
-          <h1>Book</h1>
-        </div>
-      </article>
+      <Article title={'The Book'} />
     </>
   )
 }

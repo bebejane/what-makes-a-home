@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import type { Menu } from "../../lib/menu";
 import { useScrollInfo } from 'next-dato-utils/hooks'
-import { Spin as Hamburger } from 'hamburger-react'
+import { Fade as Hamburger } from 'hamburger-react'
 import { useStore } from "../../lib/store";
 
 export type Props = {

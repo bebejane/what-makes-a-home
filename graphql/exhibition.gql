@@ -1,5 +1,6 @@
 query Exhibition {
 	exhibition {
+		id
 		title
 		intro {
 			links

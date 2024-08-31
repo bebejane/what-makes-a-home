@@ -21,6 +21,10 @@
     width: 50vw;
     height: var(--height);
 
+    @include mq($until: tablet) {
+      width: 100vw;
+    }
+
     li {
       position: absolute;
       top: 0;

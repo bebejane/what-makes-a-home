@@ -130,33 +130,3 @@ select {
 	justify-content: center;
 	align-items: center;
 }
-
-article {
-	display: flex;
-	flex-direction: row;
-
-
-	@include mq($until: tablet) {
-		flex-direction: column;
-	}
-
-	>div {
-		display: flex;
-		flex-direction: column;
-		flex: 0 0 50%;
-		height: 100vh;
-
-		figure {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			max-height: 100vh;
-			padding: 10vw;
-
-			img {
-				object-fit: contain;
-				height: 100%;
-			}
-		}
-	}
-}
