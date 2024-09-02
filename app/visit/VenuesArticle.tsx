@@ -23,7 +23,7 @@ export default function VenuesArticle({ allVenues }: Props) {
       <div className={articleStyle.left}>
         <figure>
           {venue && venue.media?.responsiveImage &&
-            <Image data={venue.media.responsiveImage} fadeInDuration={0} usePlaceholder={false} />
+            <Image data={venue.media.responsiveImage} fadeInDuration={0} />
           }
           {venue && venue.media?.video &&
             <VideoPlayer data={venue.media} className={s.video} />

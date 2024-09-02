@@ -29,7 +29,7 @@ export default async function Article({
       <div className={s.left}>
         {image &&
           <figure>
-            <Image data={image.responsiveImage} />
+            <Image data={image.responsiveImage} fadeInDuration={0} />
           </figure>
         }
       </div>
