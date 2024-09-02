@@ -12,7 +12,7 @@ export default async function TextBlock({ data: { id, duration, smallHeadline, t
   return (
     <div className={cn(s.container)}>
       <h2 className={s.smallHeadline}>{smallHeadline}</h2>
-      <p className={s.text}>{text}</p>
+      <h3 className={s.text}>{text}</h3>
     </div>
   )
 }

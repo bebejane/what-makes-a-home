@@ -3,7 +3,7 @@ body {
   font-size: 15px;
   font-weight: normal;
 
-  @include mq($from: tablet) {
+  @include mq($from: desktop) {
     font-size: 1.3vw;
   }
 
