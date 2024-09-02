@@ -1,0 +1,29 @@
+.container {
+
+
+  .venues {
+    list-style: none;
+
+    li {
+      cursor: pointer;
+      margin-bottom: 1rem;
+
+      .info {
+        display: none;
+      }
+
+      .video {}
+
+      &.selected {
+
+        .info {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .video {
+    max-width: 100%;
+  }
+}
