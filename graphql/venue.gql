@@ -11,7 +11,7 @@ query AllVenues {
 			value
 			links
 		}
-		gallery {
+		media {
 			...MediaFragment
 		}
 	}
@@ -30,7 +30,7 @@ query Venue($id: ItemId!) {
 			value
 			links
 		}
-		gallery {
+		media {
 			...MediaFragment
 		}
 	}
