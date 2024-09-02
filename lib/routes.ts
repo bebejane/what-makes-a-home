@@ -1,10 +1,3 @@
-import { buildClient } from "@datocms/cma-client-browser"
-
-const client = buildClient({
-  apiToken: process.env.NEXT_PUBLIC_DATOCMS_API_TOKEN,
-  environment: process.env.DATOCMS_ENVIRONMENT
-})
-
 type Routes = {
   [key: string]: Route
 }
@@ -19,6 +12,18 @@ const routes: Routes = {
     typeName: "StartRecord",
     path: async (item) => '/'
   },
+  "venue": {
+    typeName: "VenueRecord",
+    path: async (item) => `/visit`
+  },
+  "exhibition": {
+    typeName: "ExhibitionRecord",
+    path: async (item) => `/exhibition`
+  },
+  "about": {
+    typeName: "AboutRecord",
+    path: async (item) => `/about`
+  }
 }
 
 export const buildRoute = async (model: string, item?: any): Promise<string> => {
