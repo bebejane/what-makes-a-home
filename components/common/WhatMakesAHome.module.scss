@@ -21,6 +21,8 @@
     animation-name: show;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
+    font-size: var(--logo-size);
+    font-weight: 500;
 
     &:nth-child(1) {
       top: -0.1em;
