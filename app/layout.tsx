@@ -18,6 +18,8 @@ export default async function RootLayout({ children }: LayoutProps) {
   return (
     <>
       <html lang="en">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <body id="root" >
           <WhatMakesAHome />
           <NavBar menu={menu} />
@@ -26,7 +28,6 @@ export default async function RootLayout({ children }: LayoutProps) {
           </main>
         </body>
       </html >
-
     </>
   );
 }

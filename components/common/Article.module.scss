@@ -1,0 +1,43 @@
+.article {
+  display: flex;
+  flex-direction: row;
+
+  p {
+    padding: 0;
+  }
+
+  @include mq($until: tablet) {
+    flex-direction: column;
+  }
+
+  .left,
+  .right {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 50%;
+    height: 100vh;
+  }
+
+  .left {
+    figure {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100vh;
+      padding: 10vw;
+
+      @include mq($until: tablet) {
+        padding: 0;
+        height: auto;
+      }
+
+      img {
+        object-fit: contain;
+        height: 100% !important;
+        width: 100% !important;
+        left: 0 !important;
+        top: 0 !important;
+      }
+    }
+  }
+}

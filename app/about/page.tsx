@@ -1,26 +1,15 @@
-import s from './page.module.scss'
-import Link from "next/link"
 import { apiQuery } from 'next-dato-utils/api';
 import { DraftMode } from 'next-dato-utils/components';
-import Content from '../../components/content/Content';
 import { AboutDocument } from '../../graphql';
-import { Image } from 'react-datocms';
+import Article from '../../components/common/Article';
 
 export default async function Page() {
 
-  const { about, draftUrl } = await apiQuery<AboutQuery, AboutQueryVariables>(AboutDocument)
+  const { about: { text, id, intro, image }, draftUrl } = await apiQuery<AboutQuery, AboutQueryVariables>(AboutDocument)
 
   return (
     <>
-      <article>
-        <div>
-          <Image data={about.image.responsiveImage} />
-        </div>
-        <div>
-          <h1>About</h1>
-          <Content content={about.text} />
-        </div>
-      </article>
+      <Article id={id} title={'About'} content={text} intro={intro} image={image as FileField} />
       <DraftMode url={draftUrl} path={'/about'} />
     </>
   )
