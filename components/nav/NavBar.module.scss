@@ -18,7 +18,8 @@
     li {
       padding-left: 1rem;
 
-      &.active {
+      &.active,
+      &:hover {
         a {
           color: var(--blue);
         }

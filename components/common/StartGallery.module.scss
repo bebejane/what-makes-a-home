@@ -11,7 +11,6 @@
   }
 
   ul {
-    --height: calc(100vh - (1.7 * var(--logo-size)) - (4 * var(--outer-margin)));
     --widht: calc(100vw - (1.8 * var(--logo-size)) - (4 * var(--outer-margin)));
 
     position: relative;
@@ -19,7 +18,7 @@
     align-items: center;
     justify-content: center;
     width: var(--widht);
-    height: var(--height);
+    height: var(--image-height);
 
     @include mq($until: tablet) {
       width: 100vw;
@@ -32,7 +31,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      height: var(--height);
+      height: var(--image-height);
       flex: 0 0 100%;
       width: 100%;
       z-index: 0;
@@ -40,8 +39,8 @@
 
       img,
       video {
-        height: var(--height);
-        max-height: var(--height);
+        height: var(--image-height);
+        max-height: var(--image-height);
         width: 100%;
         object-fit: contain;
       }
