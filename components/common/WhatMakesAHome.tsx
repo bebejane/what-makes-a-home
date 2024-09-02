@@ -23,7 +23,7 @@ export default function WhatMakesAHome() {
     <div className={s.intro} style={{ "--interval": `${interval}ms` } as React.CSSProperties}>
       <h1><Link href="/">What</Link></h1>
       <h1><Link href="/">Makes</Link></h1>
-      <h1><Link href="/">a home</Link></h1>
+      <h1><Link href="/">a Home</Link></h1>
     </div>
   )
 }

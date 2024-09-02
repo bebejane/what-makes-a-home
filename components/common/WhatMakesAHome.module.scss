@@ -37,7 +37,10 @@
 
     &:nth-child(2) {
       top: 0;
-      right: -0.1em;
+      right: -0.2em;
+      @include mq($from: desktop) {
+        right: -0.1em;
+      }
       writing-mode: vertical-rl;
       animation-delay: calc(2 * var(--interval));
     }

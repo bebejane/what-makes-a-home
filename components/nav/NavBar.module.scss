@@ -48,10 +48,13 @@
     }
 
     ul {
-      padding-top: calc(2rem + var(--outer-margin));
+      padding-top: calc(var(--logo-size) + 4 * var(--outer-margin));
+      padding-left: var(--logo-size);
       flex-direction: column;
 
       li {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
       }
     }
   }

@@ -42,11 +42,23 @@
   }
 
   .right {
-    padding-right: calc(2 * var(--logo-size));
+    @include mq($until: desktop) {
+      padding-left: var(--outer-margin);
+      padding-right: calc(2 * var(--outer-margin) + var(--logo-size));
+      padding-bottom: calc(2 * var(--outer-margin) + var(--logo-size));
+    }
+
+    @include mq($from: desktop) {
+      padding-right: calc(2 * var(--logo-size));
+    }
 
     h1 {
       margin-top: calc(var(--outer-margin) + 0.4 * var(--logo-size));
-      margin-bottom: calc(var(--outer-margin) + 0.4 * var(--logo-size));
+      margin-bottom: calc(var(--outer-margin) + 0.2 * var(--logo-size));
+
+      @include mq($from: desktop) {
+        margin-bottom: calc(var(--outer-margin) + 0.4 * var(--logo-size));
+      }
     }
   }
 }

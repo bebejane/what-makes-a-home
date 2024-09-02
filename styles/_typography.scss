@@ -22,23 +22,21 @@ h5 {
   }
 }
 
-h1 {
+h1,
+h2 {
   font-weight: 500;
   padding-bottom: var(--space);
   line-height: 1.25;
   font-family: $headline-font;
 }
 
-h2 {
-  font-size: 0.75rem;
-  font-family: $headline-font;
-}
-
 h3 {
-  font-size: 0.85rem;
+  font-size: 2.5rem;
   font-family: $headline-font;
   margin-bottom: 0;
   padding-bottom: 0;
+  line-height: 1.2;
+  font-weight: 500;
 }
 
 p {
@@ -54,17 +52,10 @@ p.intro,
   line-height: var(--line-height);
 }
 
-.small,
-.small p,
-footer,
-footer nav,
-figcaption,
-.caption label {
-}
-
 nav,
 button,
-h1 {
+h1,
+h2 {
   font-family: $headline-font;
   font-size: 0.8rem;
   font-weight: 700;
@@ -77,29 +68,6 @@ b {
 
 // För Article
 article {
-  ul {
-    padding-left: 1em;
-    list-style-type: square;
-
-    p:last-of-type {
-      margin-bottom: 0.7em;
-    }
-
-    & li:last-child p {
-      margin-bottom: 1em;
-    }
-  }
-
-  p,
-  .intro,
-  h2,
-  .structured h3,
-  ul {
-    padding-left: var(--outer-margin);
-    padding-right: var(--outer-margin);
-    text-align: left;
-  }
-
   ul p {
     padding-left: 0;
   }

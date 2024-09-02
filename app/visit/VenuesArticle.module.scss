@@ -1,21 +1,27 @@
 .container {
-
+  padding-left: 0;
 
   .venues {
     list-style: none;
 
     li {
       cursor: pointer;
-      margin-bottom: 1rem;
+      margin-bottom: 3rem;
+
+      h2 {
+        padding-bottom: 1em;
+      }
 
       .info {
         display: none;
+        padding-bottom: 3rem;
+        padding-top: 1rem;
       }
 
-      .video {}
+      .video {
+      }
 
       &.selected {
-
         .info {
           display: block;
         }

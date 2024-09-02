@@ -41,21 +41,15 @@ export default function VenuesArticle({ allVenues }: Props) {
               onMouseLeave={() => setHover(null)}
               onClick={() => setSelected(selected?.id === venue.id ? null : venue as VenueRecord)}
             >
-              <h3>Opening soon</h3>
-              <div>{venue.city}</div>
-              <div suppressHydrationWarning={true}>
-                {format(new Date(venue.openingDate), 'MMMM dd, yyyy')}
-              </div>
-              <div className={s.info}>
+              <h2>Opening soon</h2>
+              <h3>{venue.city}</h3>
+              <h3 suppressHydrationWarning={true}>
+                {format(new Date(venue.openingDate), 'MMM dd') + '—' + format(new Date(venue.closingDate), 'dd, yyyy')}
+              </h3>
+              <div className={cn(s.info, "article")}>
                 <Content content={venue.text} />
-                {venue.openingDate && venue.closingDate &&
-                  <div suppressHydrationWarning={true}>
-                    {format(new Date(venue.openingDate), 'MMM dd, yyyy') + ' - ' + format(new Date(venue.closingDate), 'MMM dd, yyyy')}
-                  </div>
-                }
-                {venue.address && <div>{venue.address}</div>}
-                {venue.city && <div>{venue.city}</div>}
-                {venue.openBetween && <div>{venue.openBetween}</div>}
+                {venue.address && <p>Where: {venue.address}</p>}
+                {venue.openBetween && <p>When: {venue.openBetween}</p>}
               </div>
             </li>
           )}
