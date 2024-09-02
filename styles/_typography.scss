@@ -23,8 +23,7 @@ h5 {
 }
 
 h1 {
-  font-size: var(--logo-size);
-  font-weight: normal;
+  font-weight: 500;
   padding-bottom: var(--space);
   line-height: 1.25;
   font-family: $headline-font;
@@ -55,22 +54,6 @@ p.intro,
   line-height: var(--line-height);
 }
 
-.thumb-intro,
-.small-body {
-  font-size: 0.75rem;
-
-  strong {
-    font-family: $headline-font;
-    font-weight: bold !important;
-    font-size: 0.65rem;
-    padding-right: 0.5em;
-  }
-
-  > p {
-    padding: 0;
-  }
-}
-
 .small,
 .small p,
 footer,
@@ -80,12 +63,11 @@ figcaption,
 }
 
 nav,
-.mid,
 button,
-.mid input,
-.mid select {
+h1 {
   font-family: $headline-font;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 700;
 }
 
 strong,
@@ -118,10 +100,6 @@ article {
     text-align: left;
   }
 
-  .structured h3 {
-    padding-bottom: 0.25em;
-  }
-
   ul p {
     padding-left: 0;
   }
@@ -135,12 +113,7 @@ article {
 
   p strong,
   p b {
-    font-weight: normal !important;
-    font-family: $headline-font;
-  }
-
-  p.center {
-    text-align: center;
+    font-weight: 700 !important;
   }
 }
 
