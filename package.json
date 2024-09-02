@@ -24,6 +24,7 @@
 		"date-fns": "^2.30.0",
 		"datocms-structured-text-utils": "^4.0.0",
 		"dotenv": "^16.4.5",
+		"framer-motion": "^11.3.31",
 		"graphql": "^16.8.1",
 		"hamburger-react": "^2.5.1",
 		"is-integer": "^1.0.7",

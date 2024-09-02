@@ -2,6 +2,7 @@
 
 import s from './WhatMakesAHome.module.scss'
 import { useStore } from '@lib/store';
+import Link from 'next/link';
 import { useEffect } from 'react';
 
 export const interval = 700;
@@ -20,9 +21,9 @@ export default function WhatMakesAHome() {
 
   return (
     <div className={s.intro} style={{ "--interval": `${interval}ms` } as React.CSSProperties}>
-      <h1>What</h1>
-      <h1>Makes</h1>
-      <h1>a home</h1>
+      <h1><Link href="/">What</Link></h1>
+      <h1><Link href="/">Makes</Link></h1>
+      <h1><Link href="/">a home</Link></h1>
     </div>
   )
 }

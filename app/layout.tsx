@@ -6,6 +6,7 @@ import { Icon } from 'next/dist/lib/metadata/types/metadata-types';
 import WhatMakesAHome from '../components/common/WhatMakesAHome';
 import { buildMenu } from '../lib/menu';
 import NavBar from '../components/nav/NavBar';
+import LayoutTransition from '../components/common/LayoutTransition';
 
 export type LayoutProps = {
   children: React.ReactNode
@@ -22,10 +23,16 @@ export default async function RootLayout({ children }: LayoutProps) {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <body id="root" >
           <WhatMakesAHome />
-          <NavBar menu={menu} />
-          <main>
-            {children}
-          </main>
+          <LayoutTransition
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <NavBar menu={menu} />
+            <main>
+              {children}
+            </main>
+          </LayoutTransition>
         </body>
       </html >
     </>
