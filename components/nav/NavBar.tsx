@@ -1,13 +1,12 @@
 'use client'
 
 import React from "react";
-import Link from "next/link";
-import cn from 'classnames'
 import s from './NavBar.module.scss'
-import { useEffect, useState } from "react";
+import cn from 'classnames'
+import Link from "next/link";
+import { useState } from "react";
 import { usePathname } from "next/navigation";
 import type { Menu } from "../../lib/menu";
-import { useScrollInfo } from 'next-dato-utils/hooks'
 import { Fade as Hamburger } from 'hamburger-react'
 import { useStore } from "../../lib/store";
 
@@ -18,12 +17,11 @@ export type Props = {
 export default function NavBar({ menu, }: Props) {
 
   const pathname = usePathname()
-  const { scrolledPosition } = useScrollInfo()
   const [open, setOpen] = useState(false)
   const [inIntro] = useStore(state => [state.inIntro]);
 
   const handleClick = () => {
-    setOpen(false)
+    setTimeout(() => setOpen(false), 200)
   }
 
   return (

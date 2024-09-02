@@ -1,6 +1,13 @@
 .container {
   padding-left: 0;
 
+  @include mq($until: desktop) {
+    .left {
+      display: none !important;
+    }
+  }
+
+
   .venues {
     list-style: none;
 
@@ -18,8 +25,7 @@
         padding-top: 1rem;
       }
 
-      .video {
-      }
+      .video {}
 
       &.selected {
         .info {

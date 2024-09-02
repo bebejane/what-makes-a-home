@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { AnimatePresence, motion } from "framer-motion";
-import { useSelectedLayoutSegment } from "next/navigation";
-import { LayoutRouterContext } from "next/dist/shared/lib/app-router-context.shared-runtime";
-import { useContext, useEffect, useRef } from "react";
+import { AnimatePresence, motion } from 'framer-motion';
+import { useSelectedLayoutSegment } from 'next/navigation';
+import { LayoutRouterContext } from 'next/dist/shared/lib/app-router-context.shared-runtime';
+import { useContext, useEffect, useRef } from 'react';
 
 function usePreviousValue<T>(value: T): T | undefined {
   const prevValue = useRef<T>();
@@ -39,11 +39,11 @@ function FrozenRouter(props: { children: React.ReactNode }) {
 
 interface LayoutTransitionProps {
   children: React.ReactNode;
-  className?: React.ComponentProps<typeof motion.div>["className"];
-  style?: React.ComponentProps<typeof motion.div>["style"];
-  initial: React.ComponentProps<typeof motion.div>["initial"];
-  animate: React.ComponentProps<typeof motion.div>["animate"];
-  exit: React.ComponentProps<typeof motion.div>["exit"];
+  className?: React.ComponentProps<typeof motion.div>['className'];
+  style?: React.ComponentProps<typeof motion.div>['style'];
+  initial: React.ComponentProps<typeof motion.div>['initial'];
+  animate: React.ComponentProps<typeof motion.div>['animate'];
+  exit: React.ComponentProps<typeof motion.div>['exit'];
 }
 
 export default function LayoutTransition({
@@ -57,7 +57,7 @@ export default function LayoutTransition({
   const segment = useSelectedLayoutSegment();
 
   return (
-    <AnimatePresence mode="wait" initial={false}>
+    <AnimatePresence mode='wait' initial={false}>
       <motion.div
         className={className}
         style={style}
@@ -65,8 +65,7 @@ export default function LayoutTransition({
         initial={initial}
         animate={animate}
         exit={exit}
-        transition={{ duration: 0.5 }}
-
+        transition={{ duration: 0.5, ease: 'easeInOut' }}
       >
         <FrozenRouter>{children}</FrozenRouter>
       </motion.div>
