@@ -23,12 +23,12 @@ export default async function RootLayout({ children }: LayoutProps) {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <body id="root" >
           <WhatMakesAHome />
+          <NavBar menu={menu} />
           <LayoutTransition
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            <NavBar menu={menu} />
             <main>
               {children}
             </main>
