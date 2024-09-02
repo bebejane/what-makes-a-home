@@ -7,8 +7,7 @@ export const runtime = "edge"
 export async function POST(req: NextRequest) {
 
   return await webPreviews(req, async ({ item, itemType }) => {
-    const path = await buildRoute(itemType.api_key, item.attributes)
-    console.log(path)
+    const path = await buildRoute(itemType.attributes.api_key, item.attributes)
     return path
   })
 }
