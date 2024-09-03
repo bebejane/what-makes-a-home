@@ -65,12 +65,23 @@
     }
 
     h1 {
+      color: var(--blue);
       @include mq($until: desktop) {
         margin-bottom: calc(var(--outer-margin) + 0.4 * var(--logo-size));
       }
 
       @include mq($from: desktop) {
+        margin-top: calc(var(--outer-margin) + 0.4 * var(--logo-size));
         margin-bottom: calc(var(--outer-margin) + 0.4 * var(--logo-size));
+      }
+    }
+
+    .intro {
+      font-weight: 700;
+      margin-bottom: 2rem;
+
+      strong {
+        color: var(--blue);
       }
     }
   }

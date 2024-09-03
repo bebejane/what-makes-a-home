@@ -49,8 +49,8 @@ export default function VenuesArticle({ allVenues }: Props) {
               </h3>
               <div className={cn(s.info, "article")}>
                 <Content content={venue.text} />
-                {venue.address && <p>Where: {venue.address}</p>}
-                {venue.openBetween && <p>When: {venue.openBetween}</p>}
+                {venue.address && <p className="small">Where: {venue.address}</p>}
+                {venue.openBetween && <p className="small">When: {venue.openBetween}</p>}
               </div>
             </li>
           )}
