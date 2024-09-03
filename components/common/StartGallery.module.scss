@@ -6,6 +6,10 @@
   width: 100%;
   height: 100vh;
 
+  @supports (height: 100dvh) {
+    height: 100dvh;
+  }
+
   &.hide {
     opacity: 0;
   }
