@@ -36,8 +36,8 @@ export default async function Article({
       </div>
       <div className={s.right}>
         <h1>{title}</h1>
-        {intro && <Content className={s.intro} content={intro} />}
-        {content && <Content className={s.text} content={content} />}
+        {intro && <Content key="intro" className={s.intro} content={intro} />}
+        {content && <Content key="content" className={s.text} content={content} />}
         {children}
       </div>
     </article>

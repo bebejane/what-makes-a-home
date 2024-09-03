@@ -9,7 +9,7 @@ export const interval = 700;
 
 export default function WhatMakesAHome() {
 
-  const [inIntro, setInIntro] = useStore(state => [state.inIntro, state.setInIntro]);
+  const [setInIntro] = useStore(state => [state.setInIntro]);
 
   useEffect(() => {
     const timeout = setTimeout(() => {
