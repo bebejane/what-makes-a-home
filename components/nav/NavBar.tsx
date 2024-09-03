@@ -21,7 +21,7 @@ export default function NavBar({ menu, }: Props) {
   const [inIntro] = useStore(state => [state.inIntro]);
 
   const handleClick = () => {
-    setTimeout(() => setOpen(false), 200)
+    setTimeout(() => setOpen(false), 300)
   }
 
   return (

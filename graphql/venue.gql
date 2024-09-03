@@ -1,5 +1,5 @@
 query AllVenues {
-	allVenues {
+	allVenues(orderBy: position_DESC) {
 		id
 		city
 		openingDate
