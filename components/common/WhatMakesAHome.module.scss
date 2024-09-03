@@ -8,7 +8,6 @@
   margin: var(--outer-margin);
   z-index: var(--z-what-is-a-home);
   pointer-events: none;
-
   width: calc(100vw - 2 * var(--outer-margin));
   height: calc(100vh - 2 * var(--outer-margin));
 
@@ -19,6 +18,8 @@
   @supports (height: 100dvh) {
     height: calc(100dvh - 2 * var(--outer-margin));
   }
+
+  transition: height 0.1s ease-out;
 
   h1 {
     position: absolute;
