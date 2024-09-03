@@ -12,7 +12,6 @@
 
   ul {
     --widht: calc(100vw - (1.8 * var(--logo-size)) - (4 * var(--outer-margin)));
-
     position: relative;
     display: flex;
     align-items: center;
@@ -21,7 +20,7 @@
     height: var(--image-height);
 
     @include mq($until: tablet) {
-      width: 100vw;
+      //width: 100vw;
     }
 
     li {
