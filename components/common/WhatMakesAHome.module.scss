@@ -1,5 +1,5 @@
 .intro {
-  --interval: 1000ms;
+  --interval: 700ms;
 
   display: block;
   position: fixed;
@@ -31,7 +31,7 @@
     animation-name: show;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
-    animation-duration: 500ms;
+    animation-duration: var(--interval);
     font-size: var(--logo-size);
     font-weight: 500;
 
