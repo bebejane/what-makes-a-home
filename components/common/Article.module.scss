@@ -23,6 +23,8 @@
   }
 
   .left {
+    position: relative;
+
     figure {
       display: flex;
       flex-direction: column;
@@ -31,6 +33,11 @@
       height: 100vh;
       padding: 11vw;
       width: 100%;
+
+      @include mq($from: desktop) {
+        position: fixed;
+        width: 50%;
+      }
 
       @include mq($until: tablet) {
         padding-right: calc(var(--outer-margin) + 0.95 * var(--logo-size));
@@ -48,12 +55,12 @@
         left: 0 !important;
         top: 0 !important;
       }
-    }
 
-    h1 {
-      display: none;
-      padding-left: var(--outer-margin);
-      padding-top: calc(var(--outer-margin) + 1.05 * var(--logo-size));
+      h1 {
+        display: none;
+        padding-left: var(--outer-margin);
+        padding-top: calc(var(--outer-margin) + 1.05 * var(--logo-size));
+      }
     }
   }
 
@@ -86,6 +93,12 @@
 
       strong {
         color: var(--blue);
+      }
+    }
+
+    @include mq($from: desktop) {
+      p:last-of-type {
+        padding-bottom: calc(var(--outer-margin) + var(--logo-size));
       }
     }
   }

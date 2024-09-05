@@ -31,12 +31,15 @@ h2 {
 }
 
 h3 {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   font-family: $headline-font;
   margin-bottom: 0;
   padding-bottom: 0;
   line-height: 1.2;
   font-weight: 500;
+  @include mq($from: desktop) {
+    font-size: 2.5rem;
+  }
 }
 
 p {

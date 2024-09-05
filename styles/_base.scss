@@ -55,15 +55,15 @@ main {
 }
 
 ::-webkit-scrollbar:vertical {
-	width: 10px;
+	width: 2px;
 }
 
 ::-webkit-scrollbar:horizontal {
-	height: 10px;
+	height: 2px;
 }
 
 ::-webkit-scrollbar-thumb {
-	background: var(--black);
+	background: var(--white);
 }
 
 *,

@@ -1,10 +1,13 @@
 .navbar {
   position: fixed;
-  bottom: var(--outer-margin);
+  bottom: 0;
   right: var(--outer-margin);
   z-index: var(--z-navbar);
   transition: opacity 0.25s ease-in-out;
   opacity: 1;
+  background-color: var(--white);
+  height: calc(1rem + (2 * var(--outer-margin)));
+  width: 50%;
 
   &.intro {
     opacity: 0;
@@ -14,6 +17,11 @@
     list-style: none;
     display: flex;
     flex-direction: row;
+    @include mq($from: desktop) {
+      justify-content: flex-end;
+      align-items: center;
+    }
+    height: 100%;
 
     li {
       padding-left: 1rem;
@@ -43,7 +51,6 @@
     opacity: 0;
 
     &.open {
-
       opacity: 1;
     }
 

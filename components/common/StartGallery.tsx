@@ -65,8 +65,8 @@ const ImageSlide = ({ slide }: { slide: ImageBlockRecord }) => {
 const TextSlide = ({ slide }: { slide: TextBlockRecord }) => {
   return (
     <div className={s.textSlide}>
-      <h3>{slide.smallHeadline}</h3>
-      <p>{slide.text}</p>
+      <h2>{slide.smallHeadline}</h2>
+      <h3>{slide.text}</h3>
     </div>
   )
 }

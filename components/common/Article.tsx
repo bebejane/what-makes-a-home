@@ -27,7 +27,6 @@ export default async function Article({
 
     <article className={cn(s.article, className)}>
       <div className={s.left}>
-        <h1 className={s.mobile}>{title}</h1>
         {image &&
           <figure>
             <Image data={image.responsiveImage} fadeInDuration={0} />

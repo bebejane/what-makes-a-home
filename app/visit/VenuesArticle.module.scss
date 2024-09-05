@@ -2,7 +2,7 @@
   padding-left: 0;
 
   @include mq($until: desktop) {
-    padding-top: 3rem;
+    padding-top: calc(2 * var(--outer-margin) + var(--logo-size));
 
     .left {
       display: none !important;
@@ -21,8 +21,10 @@
       }
 
       .info {
-        display: none;
-        padding-bottom: 3rem;
+        @include mq($from: desktop) {
+          display: none;
+          //padding-bottom: 3rem;
+        }
         padding-top: 1rem;
 
         p:not(:first-of-type) {
@@ -30,7 +32,8 @@
         }
       }
 
-      .video {}
+      .video {
+      }
 
       &.selected {
         .info {
