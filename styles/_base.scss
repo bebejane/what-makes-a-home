@@ -33,6 +33,9 @@ body {
 	font-family: $body-font;
 	-webkit-font-smoothing: antialiased;
 	font-feature-settings: "liga", "kern";
+	font-feature-settings:
+		"ss08" 1,
+		"ss07" 1;
 }
 
 html {
