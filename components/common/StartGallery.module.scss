@@ -40,6 +40,16 @@
       z-index: 0;
       transition: opacity 0.5s ease-in-out;
 
+      >div {
+        &.portait {
+          background-color: green;
+        }
+
+        &.landscape {
+          background-color: white;
+        }
+      }
+
       img,
       video {
         height: var(--image-height);
@@ -55,14 +65,11 @@
       h2 {
         padding-bottom: 0.5em;
       }
+
     }
 
-    div.portait {
-      background-color: green;
-    }
 
-    div.landscape {
-      background-color: white;
-    }
   }
+
+
 }

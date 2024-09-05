@@ -3,7 +3,7 @@
 import s from './StartGallery.module.scss'
 import cn from 'classnames'
 import { Image } from 'react-datocms'
-import { VideoPlayer } from "next-dato-utils/components";
+import { VideoPlayer, Markdown } from "next-dato-utils/components";
 import { sleep } from 'next-dato-utils/utils';
 import React, { useState, useEffect } from 'react';
 import { interval } from './WhatMakesAHome';
@@ -52,8 +52,10 @@ export default function StartGallery({ slides }: Props) {
 
 const ImageSlide = ({ slide }: { slide: ImageBlockRecord }) => {
 
+  const landscape = slide.image?.width > slide.image?.height
+
   return (
-    <div className={s.imageSlide}>
+    <div className={cn(s.imageSlide, landscape ? s.landscape : s.portrait)}>
       <Image
         className={s.picture}
         data={slide.image.responsiveImage}
@@ -69,7 +71,7 @@ const TextSlide = ({ slide }: { slide: TextBlockRecord }) => {
   return (
     <div className={s.textSlide}>
       <h2>{slide.smallHeadline}</h2>
-      <h3>{slide.text}</h3>
+      <Markdown content={slide.text} />
     </div>
   )
 }
