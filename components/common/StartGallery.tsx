@@ -71,7 +71,7 @@ const TextSlide = ({ slide }: { slide: TextBlockRecord }) => {
   return (
     <div className={s.textSlide}>
       <h2>{slide.smallHeadline}</h2>
-      <Markdown content={slide.text} />
+      <h3><Markdown content={slide.text} /></h3>
     </div>
   )
 }
