@@ -1,0 +1,19 @@
+query Book {
+	book {
+		id
+		title
+		image {
+			...ImageFragment
+		}
+		intro {
+			blocks
+			value
+			links
+		}
+		text {
+			blocks
+			value
+			links
+		}
+	}
+}

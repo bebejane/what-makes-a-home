@@ -8,6 +8,15 @@ declare module '*/about.gql' {
 }
     
 
+declare module '*/book.gql' {
+  import { DocumentNode } from 'graphql';
+  const defaultDocument: DocumentNode;
+  export const Book: DocumentNode;
+
+  export default defaultDocument;
+}
+    
+
 declare module '*/exhibition.gql' {
   import { DocumentNode } from 'graphql';
   const defaultDocument: DocumentNode;
