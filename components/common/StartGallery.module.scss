@@ -51,6 +51,18 @@
       &.hide {
         opacity: 0;
       }
+
+      h2 {
+        padding-bottom: 0.5em;
+      }
+    }
+
+    div.portait {
+      background-color: green;
+    }
+
+    div.landscape {
+      background-color: white;
     }
   }
 }

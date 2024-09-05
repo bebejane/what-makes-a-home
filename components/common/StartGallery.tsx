@@ -51,6 +51,7 @@ export default function StartGallery({ slides }: Props) {
 }
 
 const ImageSlide = ({ slide }: { slide: ImageBlockRecord }) => {
+
   return (
     <div className={s.imageSlide}>
       <Image
@@ -61,6 +62,8 @@ const ImageSlide = ({ slide }: { slide: ImageBlockRecord }) => {
     </div>
   )
 }
+
+
 
 const TextSlide = ({ slide }: { slide: TextBlockRecord }) => {
   return (

@@ -24,7 +24,9 @@
     height: 100%;
 
     li {
-      padding-left: 1rem;
+      @include mq($from: desktop) {
+        padding-left: 1rem;
+      }
 
       &.active,
       &:hover {
@@ -69,8 +71,8 @@
 
 .hamburger {
   position: fixed;
-  bottom: 0.1rem;
-  right: 0;
+  bottom: 0.2rem;
+  right: 0.2rem;
   width: 48px;
   height: 48px;
   z-index: var(--z-hamburger);
