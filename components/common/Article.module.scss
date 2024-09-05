@@ -102,7 +102,12 @@
     }
 
     .logos {
-      width: 33vw;
+      padding-top: 2rem;
+      @include mq($from: desktop) {
+        & img {
+          width: 33vw;
+        }
+      }
     }
   }
 }

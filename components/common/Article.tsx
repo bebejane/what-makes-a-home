@@ -40,7 +40,11 @@ export default async function Article({
         {intro && <Content key="intro" className={s.intro} content={intro} />}
         {content && <Content key="content" className={s.text} content={content} />}
         {children}
-        {logo && <img className={s.logos} src={logo.url} />}
+        {logo &&
+          <div className={s.logos}>
+            <p className="very-small">With support by</p>
+            <img src={logo.url} />
+          </div>}
       </div>
     </article>
   );
