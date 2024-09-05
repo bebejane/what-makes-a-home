@@ -20,8 +20,7 @@
 		--outer-margin: 2vw;
 	}
 
-	@include mq($until: tablet) {
-	}
+	@include mq($until: tablet) {}
 }
 
 body {
@@ -45,6 +44,18 @@ html {
 html,
 body {
 	height: 100vh;
+}
+
+body {
+
+	@include mq($from: desktop) {
+		transition: background-color var(--page-transition-time) ease-in-out;
+
+		&.dark {
+			--background: var(--black);
+			--foreground: var(--white);
+		}
+	}
 }
 
 main {
@@ -79,11 +90,9 @@ a {
 	text-decoration: none;
 	color: var(--foreground);
 
-	&:hover {
-	}
+	&:hover {}
 
-	&:visited {
-	}
+	&:visited {}
 }
 
 .intro {
@@ -95,16 +104,13 @@ button {
 	color: var(--foreground);
 	border: 0;
 
-	@include mq($from: tablet) {
-	}
+	@include mq($from: tablet) {}
 
 	&.back {
-		@include mq($from: tablet) {
-		}
+		@include mq($from: tablet) {}
 	}
 
-	&:hover {
-	}
+	&:hover {}
 }
 
 figcaption {
@@ -113,14 +119,12 @@ figcaption {
 	margin-bottom: 1em;
 }
 
-hr {
-}
+hr {}
 
 input,
 textarea,
 select {
-	&:focus {
-	}
+	&:focus {}
 }
 
 select {

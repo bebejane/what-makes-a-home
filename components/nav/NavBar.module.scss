@@ -13,14 +13,23 @@
     opacity: 0;
   }
 
+  @include mq($from: desktop) {
+    background-color: transparent;
+
+    &.hovering {}
+  }
+
+
   ul {
     list-style: none;
     display: flex;
     flex-direction: row;
+
     @include mq($from: desktop) {
       justify-content: flex-end;
       align-items: center;
     }
+
     height: 100%;
 
     li {
