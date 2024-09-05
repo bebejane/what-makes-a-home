@@ -5,11 +5,18 @@ import Article from '../../components/common/Article';
 
 export default async function Page() {
 
-  const { about: { text, id, intro, image }, draftUrl } = await apiQuery<AboutQuery, AboutQueryVariables>(AboutDocument)
+  const { about: { text, id, intro, image, logo }, draftUrl } = await apiQuery<AboutQuery, AboutQueryVariables>(AboutDocument)
 
   return (
     <>
-      <Article id={id} title={'About'} content={text} intro={intro} image={image as FileField} />
+      <Article
+        id={id}
+        title={'About'}
+        content={text}
+        intro={intro}
+        image={image as FileField}
+        logo={logo as FileField}
+      />
       <DraftMode url={draftUrl} path={'/about'} />
     </>
   )

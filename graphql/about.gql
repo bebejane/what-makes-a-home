@@ -10,7 +10,9 @@ query About {
 		text {
 			links
 			value
-			blocks
+		}
+		logo {
+			...ImageFragment
 		}
 		image {
 			...ImageFragment

@@ -8,6 +8,7 @@ export type ArticleProps = {
   title?: string;
   intro?: any;
   image?: FileField
+  logo?: FileField
   content?: any;
   className?: string
   children?: React.ReactNode | React.ReactNode[]
@@ -19,6 +20,7 @@ export default async function Article({
   intro,
   content,
   image,
+  logo,
   className,
   children
 }: ArticleProps) {
@@ -38,6 +40,7 @@ export default async function Article({
         {intro && <Content key="intro" className={s.intro} content={intro} />}
         {content && <Content key="content" className={s.text} content={content} />}
         {children}
+        {logo && <img className={s.logos} src={logo.url} />}
       </div>
     </article>
   );
