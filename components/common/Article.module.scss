@@ -73,6 +73,10 @@
 
     @include mq($from: desktop) {
       padding-right: calc(2 * var(--logo-size));
+
+      *:last-child {
+        padding-bottom: calc(var(--outer-margin) + var(--logo-size));
+      }
     }
 
     h1 {
@@ -97,14 +101,8 @@
       }
     }
 
-    @include mq($from: desktop) {
-      p:last-of-type {
-        padding-bottom: calc(var(--outer-margin) + var(--logo-size));
-      }
-    }
-
-    .logo {
-      height: 2rem
+    .logos {
+      width: 33vw;
     }
   }
 }
