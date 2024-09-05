@@ -23,6 +23,10 @@ const routes: Routes = {
   "about": {
     typeName: "AboutRecord",
     path: async (item) => `/about`
+  },
+  "book": {
+    typeName: "BookRecord",
+    path: async (item) => `/book`
   }
 }
 

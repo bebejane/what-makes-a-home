@@ -41,8 +41,8 @@ export default function NavBar({ menu, }: Props) {
     <>
       <nav
         className={cn(s.navbar, open && s.open, inIntro && s.intro, hoveringNav && s.hovering)}
-        onMouseEnter={handleMouse}
-        onMouseLeave={handleMouse}
+      //onMouseEnter={handleMouse}
+      //onMouseLeave={handleMouse}
       >
         <ul>
           {menu.map((item, i) => {

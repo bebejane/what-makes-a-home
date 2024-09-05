@@ -3,7 +3,7 @@
   bottom: 0;
   right: var(--outer-margin);
   z-index: var(--z-navbar);
-  transition: opacity 0.25s ease-in-out;
+  transition: opacity var(--page-transition-time) ease-in-out, background-color var(--page-transition-time) ease-in-out;
   opacity: 1;
   background-color: var(--background);
   height: calc(1rem + (2 * var(--outer-margin)));
@@ -14,9 +14,10 @@
   }
 
   @include mq($from: desktop) {
-    background-color: transparent;
 
-    &.hovering {}
+    &.hovering {
+      background-color: var(--black);
+    }
   }
 
 
