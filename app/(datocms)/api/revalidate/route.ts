@@ -12,8 +12,10 @@ export async function POST(req: Request) {
     const tags: string[] = [api_key, id].filter(t => t)
     const paths: string[] = []
     const path = await buildRoute(api_key, attributes)
+
     if (path)
       paths.push(path)
+
     paths.push('/')
 
     return await revalidate(paths, tags, true)

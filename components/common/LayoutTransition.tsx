@@ -30,7 +30,6 @@ function FrozenRouter(props: { children: React.ReactNode }) {
     segment !== undefined &&
     prevSegment !== undefined;
 
-  console.log(changed, segment, prevSegment);
   return (
     <LayoutRouterContext.Provider value={changed ? prevContext : context}>
       {props.children}
