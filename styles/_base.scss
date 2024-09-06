@@ -46,18 +46,6 @@ body {
 	height: 100vh;
 }
 
-body {
-
-	@include mq($from: desktop) {
-		transition: background-color var(--page-transition-time) ease-in-out;
-
-		&.dark {
-			--background: var(--black);
-			--foreground: var(--white);
-		}
-	}
-}
-
 main {
 	display: block;
 	height: 100vh;
