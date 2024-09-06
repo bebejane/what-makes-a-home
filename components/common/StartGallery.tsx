@@ -17,21 +17,33 @@ export default function StartGallery({ slides }: Props) {
 
   const [index, setIndex] = useState<number>(-1)
   const [inIntro] = useStore(state => [state.inIntro]);
+  const runningRef = React.useRef<boolean>(false)
 
   useEffect(() => {
 
+    let timeouts = []
+
     const update = async () => {
+
+      timeouts = []
+
       if (inIntro)
         await sleep(interval * slides.length)
 
       for (let i = 0; i < slides.length; i++) {
         setIndex(i)
-        await sleep(slides[i].duration * 1000)
+        await new Promise((resolve) => timeouts.push(setTimeout(() => {
+          resolve(true)
+        }, slides[i].duration * 1000)))
       }
       update()
     }
 
     update()
+
+    return () => {
+      timeouts.forEach(clearTimeout)
+    }
 
   }, [inIntro, slides])
 
@@ -58,6 +70,7 @@ const ImageSlide = ({ slide }: { slide: ImageBlockRecord }) => {
     <div className={cn(s.imageSlide, landscape ? s.landscape : s.portrait)}>
       <Image
         className={s.picture}
+        placeholderClassName={s.placeholder}
         data={slide.image.responsiveImage}
         onLoad={() => console.log('loaded')}
       />
