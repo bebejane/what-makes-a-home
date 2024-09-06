@@ -40,16 +40,8 @@
       z-index: 0;
       transition: opacity 0.5s ease-in-out;
 
-      .imageSlide {
-        //background-color: blue;
-      }
-
       .portrait {
-        background-color: green;
-      }
-
-      .landscape {
-        background-color: white;
+        width: var(--widht);
       }
 
       img,
