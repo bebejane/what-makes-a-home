@@ -24,7 +24,7 @@
     height: var(--image-height);
 
     @include mq($until: tablet) {
-      //width: 100vw;
+      width: 100vw;
     }
 
     li {
@@ -40,14 +40,16 @@
       z-index: 0;
       transition: opacity 0.5s ease-in-out;
 
-      >div {
-        &.portait {
-          background-color: green;
-        }
+      .imageSlide {
+        //background-color: blue;
+      }
 
-        &.landscape {
-          background-color: white;
-        }
+      .portait {
+        background-color: green;
+      }
+
+      .landscape {
+        background-color: white;
       }
 
       img,
@@ -65,11 +67,6 @@
       h2 {
         padding-bottom: 0.5em;
       }
-
     }
-
-
   }
-
-
 }
