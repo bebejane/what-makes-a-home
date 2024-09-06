@@ -17,11 +17,11 @@ export default function StartGallery({ slides }: Props) {
 
   const [index, setIndex] = useState<number>(-1)
   const [inIntro] = useStore(state => [state.inIntro]);
-  const runningRef = React.useRef<boolean>(false)
 
   useEffect(() => {
 
     let timeouts = []
+    let stopped = false
 
     const update = async () => {
 
@@ -31,6 +31,7 @@ export default function StartGallery({ slides }: Props) {
         await sleep(interval * slides.length)
 
       for (let i = 0; i < slides.length; i++) {
+        if (stopped) return
         setIndex(i)
         await new Promise((resolve) => timeouts.push(setTimeout(() => {
           resolve(true)
@@ -42,6 +43,7 @@ export default function StartGallery({ slides }: Props) {
     update()
 
     return () => {
+      stopped = true
       timeouts.forEach(clearTimeout)
     }
 
@@ -77,8 +79,6 @@ const ImageSlide = ({ slide }: { slide: ImageBlockRecord }) => {
     </div>
   )
 }
-
-
 
 const TextSlide = ({ slide }: { slide: TextBlockRecord }) => {
   return (
