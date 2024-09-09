@@ -62,6 +62,7 @@ export default function VenuesArticle({ allVenues }: Props) {
                 {venue.address && <p className="small">Where: {venue.address}</p>}
                 {venue.openBetween && <p className="small">When: {venue.openBetween}</p>}
               </div>
+              {venue.logo && <img className={s.logos} src={venue.logo.url} alt={venue.logo.alt} />}
             </li>
           )}
         </ul>

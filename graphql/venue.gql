@@ -6,6 +6,9 @@ query AllVenues {
 		closingDate
 		address
 		openBetween
+		logo {
+			...ImageFragment
+		}
 		text {
 			blocks
 			value
@@ -25,6 +28,9 @@ query Venue($id: ItemId!) {
 		closingDate
 		address
 		openBetween
+		logo {
+			...ImageFragment
+		}
 		text {
 			blocks
 			value

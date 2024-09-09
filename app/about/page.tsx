@@ -15,7 +15,6 @@ export default async function Page() {
         content={text}
         intro={intro}
         image={image as FileField}
-        logo={logo as FileField}
       />
       <DraftMode url={draftUrl} path={'/about'} />
     </>

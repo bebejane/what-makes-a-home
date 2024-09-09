@@ -44,7 +44,12 @@
         }
       }
 
+      .logos {
+        margin-top: 1em;
+      }
+
       @include mq($until: desktop) {
+
         .video,
         .picture,
         .image {
@@ -54,6 +59,7 @@
       }
 
       @include mq($from: desktop) {
+
         .video,
         .image {
           display: none;
