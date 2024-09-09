@@ -12,8 +12,8 @@ export type MenuItem = {
 
 const base: Menu = [
   { type: 'home', label: 'Home', slug: '/' },
-  { type: 'visit', label: 'Visit', slug: '/visit' },
-  { type: 'exhibition', label: 'The Exhibition', slug: '/exhibition' },
+  { type: 'visit', label: 'The Exhibitions', slug: '/visit' },
+  { type: 'exhibition', label: 'The Project', slug: '/exhibition' },
   { type: 'book', label: 'The Book', slug: '/book' },
   { type: 'about', label: 'About', slug: '/about' },
 ]
