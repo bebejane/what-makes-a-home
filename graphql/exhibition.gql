@@ -15,5 +15,8 @@ query Exhibition {
 		image {
 			...ImageFragment
 		}
+		logo {
+			...ImageFragment
+		}
 	}
 }
