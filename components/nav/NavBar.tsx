@@ -38,9 +38,11 @@ export default function NavBar({ menu, }: Props) {
           })}
         </ul>
       </nav>
-      <nav className={s.hamburger}>
-        <Hamburger toggled={open} toggle={setOpen} size={28} />
-      </nav>
+      <div className={s.background}>
+        <nav className={s.hamburger}>
+          <Hamburger toggled={open} toggle={setOpen} size={28} />
+        </nav>
+      </div>
     </>
   );
 }

@@ -71,6 +71,16 @@
   }
 }
 
+.background {
+  width: 100%;
+  background-color: var(--white);
+  height: calc(var(--navbar-height) + var(--outer-margin));
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
 .hamburger {
   position: fixed;
   bottom: 0.2rem;
