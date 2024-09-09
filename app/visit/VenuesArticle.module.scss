@@ -25,6 +25,12 @@
         padding-bottom: 1em;
       }
 
+      @include mq($until: desktop) {
+        h3:last-of-type {
+          margin-bottom: 1rem;
+        }
+      }
+
       .info {
         @include mq($from: desktop) {
           display: none;
@@ -39,7 +45,6 @@
       }
 
       @include mq($until: desktop) {
-
         .video,
         .picture,
         .image {
@@ -49,13 +54,11 @@
       }
 
       @include mq($from: desktop) {
-
         .video,
         .image {
           display: none;
         }
       }
-
 
       &.selected {
         .info {

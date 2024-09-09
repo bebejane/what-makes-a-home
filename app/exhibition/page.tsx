@@ -9,7 +9,7 @@ export default async function Page() {
 
   return (
     <>
-      <Article id={id} title={'The Exhibition'} content={text} intro={intro} image={image as FileField} />
+      <Article id={id} title={'The Project'} content={text} intro={intro} image={image as FileField} />
       <DraftMode url={draftUrl} path={'/exhibition'} />
     </>
   )

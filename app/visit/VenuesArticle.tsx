@@ -32,7 +32,7 @@ export default function VenuesArticle({ allVenues }: Props) {
         </figure>
       </div>
       <div className={articleStyle.right}>
-        <h1>Visit</h1>
+        <h1>The Exhibitions</h1>
         <ul className={s.venues}>
           {allVenues.map((venue, idx) =>
             <li
