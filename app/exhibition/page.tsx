@@ -11,7 +11,10 @@ export default async function Page() {
   return (
     <>
       <Article id={id} title={'The Project'} content={text} intro={intro} image={image as FileField} >
-        {logo && <img className={s.logos} src={logo.url} alt={logo.alt} />}
+        <div className={s.logos}>
+          <p className="very-small">With support from</p>
+          {logo && <img src={logo.url} alt={logo.alt} />}
+        </div>
       </Article>
       <DraftMode url={draftUrl} path={'/exhibition'} />
     </>
