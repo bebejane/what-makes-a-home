@@ -12,7 +12,7 @@
 	--page-transition-time: 500ms;
 
 	--z-navbar: 100;
-	--z-hamburger: 210;
+	--z-hamburger: 101;
 	--z-what-is-a-home: 200;
 
 	@include mq($from: tablet) {
@@ -20,8 +20,7 @@
 		--outer-margin: 2vw;
 	}
 
-	@include mq($until: tablet) {
-	}
+	@include mq($until: tablet) {}
 }
 
 body {
@@ -79,11 +78,9 @@ a {
 	text-decoration: none;
 	color: var(--foreground);
 
-	&:hover {
-	}
+	&:hover {}
 
-	&:visited {
-	}
+	&:visited {}
 }
 
 .intro {
@@ -95,16 +92,13 @@ button {
 	color: var(--foreground);
 	border: 0;
 
-	@include mq($from: tablet) {
-	}
+	@include mq($from: tablet) {}
 
 	&.back {
-		@include mq($from: tablet) {
-		}
+		@include mq($from: tablet) {}
 	}
 
-	&:hover {
-	}
+	&:hover {}
 }
 
 figcaption {
@@ -113,14 +107,12 @@ figcaption {
 	margin-bottom: 1em;
 }
 
-hr {
-}
+hr {}
 
 input,
 textarea,
 select {
-	&:focus {
-	}
+	&:focus {}
 }
 
 select {

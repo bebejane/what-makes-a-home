@@ -73,21 +73,25 @@
 
 .background {
   width: 100%;
-  background-color: var(--white);
-  height: calc(var(--navbar-height) + var(--outer-margin));
   position: fixed;
   bottom: 0;
   left: 0;
-  z-index: 1;
+  z-index: 100;
 }
 
 .hamburger {
   position: fixed;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
   bottom: 0.2rem;
   right: 0.2rem;
   width: 48px;
   height: 48px;
   z-index: var(--z-hamburger);
+  background-color: var(--white) !important;
+  width: 100%;
+  height: calc(var(--navbar-height) + var(--outer-margin));
 
   @include mq($from: desktop) {
     display: none;
