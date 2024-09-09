@@ -47,6 +47,16 @@ export default function VenuesArticle({ allVenues }: Props) {
               <h3 suppressHydrationWarning={true}>
                 {format(new Date(venue.openingDate), 'MMM dd') + '–' + format(new Date(venue.closingDate), 'dd, yyyy')}
               </h3>
+              {venue.media &&
+                venue.media.responsiveImage ?
+                <Image className={s.image} pictureClassName={s.picture} data={venue.media.responsiveImage} fadeInDuration={0} />
+                :
+                venue.media.video ?
+                  <VideoPlayer className={s.video} data={venue.media} />
+                  :
+                  null
+              }
+
               <div className={cn(s.info, "article")}>
                 <Content content={venue.text} />
                 {venue.address && <p className="small">Where: {venue.address}</p>}

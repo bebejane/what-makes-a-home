@@ -15,6 +15,7 @@
     li {
       cursor: pointer;
       margin-bottom: 3rem;
+
       div,
       p {
         padding-bottom: 0 !important;
@@ -29,6 +30,7 @@
           display: none;
           //padding-bottom: 3rem;
         }
+
         padding-top: 1rem;
 
         p:not(:first-of-type) {
@@ -36,8 +38,24 @@
         }
       }
 
-      .video {
+      @include mq($until: desktop) {
+
+        .video,
+        .picture,
+        .image {
+          width: 100%;
+          object-fit: contain;
+        }
       }
+
+      @include mq($from: desktop) {
+
+        .video,
+        .image {
+          display: none;
+        }
+      }
+
 
       &.selected {
         .info {
