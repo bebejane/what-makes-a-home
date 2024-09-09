@@ -20,7 +20,7 @@ export default function NavBar({ menu, }: Props) {
   const [open, setOpen] = useState(false)
   const [inIntro] = useStore(state => [state.inIntro]);
 
-  const handleClick = () => setTimeout(() => setOpen(false), 300)
+  const handleClick = () => setTimeout(() => setOpen(false), 500)
 
   return (
     <>
@@ -38,11 +38,9 @@ export default function NavBar({ menu, }: Props) {
           })}
         </ul>
       </nav>
-
       <nav className={s.hamburger}>
         <Hamburger toggled={open} toggle={setOpen} size={28} />
       </nav>
-
     </>
   );
 }
