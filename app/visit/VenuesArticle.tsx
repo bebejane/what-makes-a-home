@@ -15,7 +15,7 @@ export type Props = {
 
 export default function VenuesArticle({ allVenues }: Props) {
 
-  const [selected, setSelected] = React.useState<VenueRecord | null>(null);
+  const [selected, setSelected] = React.useState<VenueRecord | null>(allVenues?.[0] as VenueRecord ?? null);
   const [hover, setHover] = React.useState<VenueRecord | null>(null);
   const venue = hover || selected || null;
 
