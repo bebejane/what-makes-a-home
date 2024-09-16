@@ -84,14 +84,18 @@
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  bottom: 0.2rem;
-  right: 0.2rem;
+  bottom: 0rem;
+  right: 0rem;
   width: 48px;
   height: 48px;
   z-index: var(--z-hamburger);
   background-color: var(--white) !important;
   width: 100%;
   height: calc(var(--navbar-height) + var(--outer-margin));
+
+  & div {
+    margin: -0.1em;
+  }
 
   @include mq($from: desktop) {
     display: none;
