@@ -60,7 +60,7 @@ export async function generateMetadata() {
       description: globalSeo?.fallbackSeo?.description,
       url: process.env.NEXT_PUBLIC_SITE_URL,
       siteName: globalSeo?.siteName,
-      images: [
+      images: globalSeo?.fallbackSeo?.image ? [
         {
           url: `${globalSeo?.fallbackSeo?.image?.url}?w=1200&h=630&fit=fill&q=80`,
           width: 800,
@@ -79,7 +79,7 @@ export async function generateMetadata() {
           height: 627,
           alt: globalSeo?.siteName
         },
-      ],
+      ] : [],
       locale: 'en_US',
       type: 'website',
     },
