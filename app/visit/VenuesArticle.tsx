@@ -8,6 +8,7 @@ import { format } from 'date-fns';
 import Content from '../../components/content/Content';
 import { Image } from 'react-datocms';
 import { VideoPlayer } from 'next-dato-utils/components';
+import { isSameDay, isBefore, isAfter } from 'date-fns';
 
 export type Props = {
   allVenues: AllVenuesQuery['allVenues'],
@@ -43,15 +44,11 @@ export default function VenuesArticle({ allVenues }: Props) {
               onClick={() => setSelected(selected?.id === venue.id ? null : venue as VenueRecord)}
             >
               <h2>
-                {/*parseVenueStatus(venue as VenueRecord)*/}
-                Open now
+                {parseVenueStatus(venue as VenueRecord)}
               </h2>
               <h3>{venue.city}</h3>
               <h3 suppressHydrationWarning={true}>
-
-                {/*format(new Date(venue.openingDate), 'MMM dd') + '–' + format(new Date(venue.closingDate), 'dd, yyyy')*/}
-                Sep 25–27, 2024
-
+                {format(new Date(venue.openingDate), 'MMM dd') + '–' + format(new Date(venue.closingDate), 'dd, yyyy')}
               </h3>
               {venue.media &&
                 venue.media.responsiveImage ?
@@ -90,10 +87,10 @@ const parseVenueStatus = (venue: VenueRecord): string => {
   }
 
   const today = new Date();
-  const opening = new Date(venue.openingDate);
-  const closing = new Date(venue.closingDate);
+  const opening = new Date(venue.openingDate); opening.setHours(0, 0, 0, 0);
+  const closing = new Date(venue.closingDate); closing.setHours(23, 59, 59, 999);
 
-  if (today < opening) {
+  if (isBefore(today, opening)) {
     return status.soon;
   } else if (today >= opening && today <= closing) {
     return status.open;
