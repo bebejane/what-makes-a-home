@@ -42,6 +42,7 @@
 
       .textSlide {
         @include mq($until: desktop) {
+          max-width: 90vw;
           //padding-left: var(--outer-margin);
         }
       }

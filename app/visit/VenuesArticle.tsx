@@ -45,7 +45,10 @@ export default function VenuesArticle({ allVenues }: Props) {
               <h2>{parseVenueStatus(venue as VenueRecord)}</h2>
               <h3>{venue.city}</h3>
               <h3 suppressHydrationWarning={true}>
-                {format(new Date(venue.openingDate), 'MMM dd') + '–' + format(new Date(venue.closingDate), 'dd, yyyy')}
+
+                {/*format(new Date(venue.openingDate), 'MMM dd') + '–' + format(new Date(venue.closingDate), 'dd, yyyy')*/}
+                Sep 25–27, 2024
+
               </h3>
               {venue.media &&
                 venue.media.responsiveImage ?
