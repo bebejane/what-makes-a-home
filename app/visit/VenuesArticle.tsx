@@ -42,7 +42,10 @@ export default function VenuesArticle({ allVenues }: Props) {
               onMouseLeave={() => setHover(null)}
               onClick={() => setSelected(selected?.id === venue.id ? null : venue as VenueRecord)}
             >
-              <h2>{parseVenueStatus(venue as VenueRecord)}</h2>
+              <h2>
+                {/*parseVenueStatus(venue as VenueRecord)*/}
+                Open now
+              </h2>
               <h3>{venue.city}</h3>
               <h3 suppressHydrationWarning={true}>
 
