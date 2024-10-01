@@ -44,7 +44,7 @@ export default function VenuesArticle({ allVenues }: Props) {
             >
               <h2>
                 {/*parseVenueStatus(venue as VenueRecord)*/}
-                Open now
+                Past
               </h2>
               <h3>{venue.city}</h3>
               <h3 suppressHydrationWarning={true}>
