@@ -130,6 +130,7 @@ declare module '*/venue.gql' {
   const defaultDocument: DocumentNode;
   export const AllVenues: DocumentNode;
 export const Venue: DocumentNode;
+export const VenueFragment: DocumentNode;
 
   export default defaultDocument;
 }

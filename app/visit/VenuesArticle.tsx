@@ -4,13 +4,12 @@ import React from 'react';
 import s from './VenuesArticle.module.scss';
 import articleStyle from '../../components/common/Article.module.scss';
 import cn from 'classnames'
-import { format } from 'date-fns';
 import Content from '../../components/content/Content';
 import { Image } from 'react-datocms';
 import { VideoPlayer } from 'next-dato-utils/components';
 
 export type Props = {
-  allVenues: AllVenuesQuery['allVenues'],
+  allVenues: AllVenuesQuery['allVenues']
 }
 
 export default function VenuesArticle({ allVenues }: Props) {
@@ -42,16 +41,10 @@ export default function VenuesArticle({ allVenues }: Props) {
               onMouseLeave={() => setHover(null)}
               onClick={() => setSelected(selected?.id === venue.id ? null : venue as VenueRecord)}
             >
-              <h2>
-                {/*parseVenueStatus(venue as VenueRecord)*/}
-                Past
-              </h2>
+              <h2>{venue.venueStatus}</h2>
               <h3>{venue.city}</h3>
-              <h3 suppressHydrationWarning={true}>
-
-                {/*format(new Date(venue.openingDate), 'MMM dd') + '–' + format(new Date(venue.closingDate), 'dd, yyyy')*/}
-                Sep 25–27, 2024
-
+              <h3>
+                {venue.openingDates}
               </h3>
               {venue.media &&
                 venue.media.responsiveImage ?
@@ -81,23 +74,3 @@ export default function VenuesArticle({ allVenues }: Props) {
   )
 };
 
-const parseVenueStatus = (venue: VenueRecord): string => {
-
-  const status = {
-    'soon': 'Opening soon',
-    'open': 'Open now',
-    'past': 'Past Exhibitions',
-  }
-
-  const today = new Date();
-  const opening = new Date(venue.openingDate);
-  const closing = new Date(venue.closingDate);
-
-  if (today < opening) {
-    return status.soon;
-  } else if (today >= opening && today <= closing) {
-    return status.open;
-  } else {
-    return status.past;
-  }
-}

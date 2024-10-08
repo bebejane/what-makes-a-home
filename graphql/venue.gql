@@ -1,43 +1,31 @@
 query AllVenues {
 	allVenues(orderBy: position_DESC) {
-		id
-		city
-		openingDate
-		closingDate
-		address
-		openBetween
-		logo {
-			...ImageFragment
-		}
-		text {
-			blocks
-			value
-			links
-		}
-		media {
-			...MediaFragment
-		}
+		...VenueFragment
 	}
 }
 
 query Venue($id: ItemId!) {
 	venue(filter: { id: { eq: $id } }) {
-		id
-		city
-		openingDate
-		closingDate
-		address
-		openBetween
-		logo {
-			...ImageFragment
-		}
-		text {
-			blocks
-			value
-			links
-		}
-		media {
-			...MediaFragment
-		}
+		...VenueFragment
+	}
+}
+
+fragment VenueFragment on VenueRecord {
+	id
+	city
+	openingDates
+	venueStatus
+	address
+	openBetween
+	logo {
+		...ImageFragment
+	}
+	text {
+		blocks
+		value
+		links
+	}
+	media {
+		...MediaFragment
 	}
 }
